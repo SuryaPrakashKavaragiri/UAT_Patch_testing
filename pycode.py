@@ -2,10 +2,51 @@ import subprocess
 from ruamel.yaml import YAML
 from ruamel.yaml.scalarstring import DoubleQuotedScalarString
 import os
+import requests
 from datetime import datetime
 
 yaml = YAML()
 yaml.default_flow_style=False
+
+
+#token = os.getenv("GITHUB_TOKEN")
+
+def create_pr(repo_owner, repo_name, source_branch, target_branch, title, body):
+    token = os.getenv("GITHUB_TOKEN")
+
+    if not token:
+        raise Exception("GITHUB_TOKEN environment variable not found")
+
+
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github+json"
+    }
+
+    payload = {
+        "title": title,
+        "head": source_branch,
+        "base": target_branch,
+        "body": body
+    }
+
+    response = requests.post(
+        f"https://api.github.com/repos/{repo_owner}/{repo_name}/pulls",
+        headers=headers,
+        json=payload
+    )
+
+    if response.status_code not in [200, 201]:
+        print(response.text)
+        response.raise_for_status()
+    print("Creating PR...")
+    print("Source branch:", source_branch)
+    print("Target branch:", target_branch)
+    
+    data = response.json()
+    if "html_url" not in data:
+        raise Exception(f"PR creation failed: {data}")
+    return data["html_url"]
 
 env=os.getenv("ENVIRONMENT")
 if not env:
@@ -65,8 +106,17 @@ def function():
     return versions
 
 versions=function()
+
+def build_commit_message(env, versions):
+    version_parts = []
+
+    for key, value in versions.items():
+        version_parts.append(f"{key.upper()}:{value}")
+
+    return f"{env.upper()} Patching - " + " | ".join(version_parts)
+
 today_date=datetime.now()
-month_date=today_date.strftime("%b%d-%H:%M:%S")
+month_date=today_date.strftime("%b%d-%H%M%S")
 
 repo=r"C:/ProgramData/Jenkins/.jenkins/workspace/test-uat-deploy/opsmgmt"
 
@@ -145,11 +195,22 @@ if env=="prod":
     gitstatus=subprocess.run(["git","status"],cwd=repo,capture_output=True,text=True).stdout
     print(gitstatus)
     gitadd=subprocess.run(["git","add","-A"],cwd=repo,check=True)
-    commitmsg=f"PROD Patching standard CES:{versions['cesstd']} & standard TWX:{versions['twxstd']}"
-    gitcommit=subprocess.run(["git","commit","-m",commitmsg],cwd=repo)
+    commitmsg = build_commit_message(env, versions)
+    gitcommit=subprocess.run(["git","commit","-m",commitmsg],cwd=repo,check=True)
     gitpush=subprocess.run(["git","push","--set-upstream","origin",newbranch],cwd=repo,check=True)
+    pr_url = create_pr(
+    repo_owner="SuryaPrakashKavaragiri",
+    repo_name="UAT_Patch_testing",
+    source_branch=newbranch,
+    target_branch="prod-k8s-c02",
+    title=commitmsg,
+    body="Created automatically by Jenkins"
+    )
+    print("=" * 80)
+    print("REVIEW THIS PULL REQUEST")
+    print(pr_url)
+    print("=" * 80)
 
-    
 elif env=="dbi":
     gitchangebranch=subprocess.run(["git","checkout","prod-k8s-c02"],cwd=repo,capture_output=True,text=True,check=True).stdout
     gitpull=subprocess.run(["git","pull"],cwd=repo,capture_output=True,text=True).stdout
@@ -165,10 +226,21 @@ elif env=="dbi":
     gitstatus=subprocess.run(["git","status"],cwd=repo,capture_output=True,text=True).stdout
     print(gitstatus)
     gitadd=subprocess.run(["git","add","-A"],cwd=repo,check=True)
-    commitmsg=f"DBI Patching CES:{versions['dbices']} & TWX:{versions['dbitwx']}"
+    commitmsg = build_commit_message(env, versions)
     gitcommit=subprocess.run(["git","commit","-m",commitmsg],cwd=repo,check=True)
     gitpush=subprocess.run(["git","push","--set-upstream","origin",newbranch],cwd=repo,check=True)
-
+    pr_url = create_pr(
+    repo_owner="SuryaPrakashKavaragiri",
+    repo_name="UAT_Patch_testing",
+    source_branch=newbranch,
+    target_branch="prod-k8s-c02",
+    title=commitmsg,
+    body="Created automatically by Jenkins"
+    )
+    print("=" * 80)
+    print("REVIEW THIS PULL REQUEST")
+    print(pr_url)
+    print("=" * 80)
 
 elif env=="uat":
     gitchangebranch=subprocess.run(["git","checkout","uat-oke-c01"],cwd=repo,capture_output=True,text=True,check=True).stdout
@@ -185,13 +257,23 @@ elif env=="uat":
     gitstatus=subprocess.run(["git","status"],cwd=repo,capture_output=True,text=True).stdout
     print(gitstatus)
     gitadd=subprocess.run(["git","add","-A"],cwd=repo,check=True)
-    commitmsg=f"UAT Patching standard CES:{versions['cesstd']} & standard TWX:{versions['twxstd']}"
+    commitmsg = build_commit_message(env, versions)
     gitcommit=subprocess.run(["git","commit","-m",commitmsg],cwd=repo,check=True)
     gitpush=subprocess.run(["git","push","--set-upstream","origin",newbranch],cwd=repo,check=True)
-
+    pr_url = create_pr(
+    repo_owner="SuryaPrakashKavaragiri",
+    repo_name="UAT_Patch_testing",
+    source_branch=newbranch,
+    target_branch="uat-oke-c01",
+    title=commitmsg,
+    body="Created automatically by Jenkins"
+    )
+    print("=" * 80)
+    print("REVIEW THIS PULL REQUEST")
+    print(pr_url)
+    print("=" * 80)
 
 else:
     raise Exception("Invalid Environment, Select Environment Prod or UAT")
 
 print("Updated tag:", versions)
-
