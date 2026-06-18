@@ -118,63 +118,64 @@ def build_commit_message(env, versions):
 today_date=datetime.now()
 month_date=today_date.strftime("%b%d-%H%M%S")
 
-repo=r"C:/ProgramData/Jenkins/.jenkins/workspace/test-uat-deploy/opsmgmt"
+#repo = os.getcwd()
+repo=r"C:/ProgramData/Jenkins/.jenkins/workspace/test-uat-deploy"
 
 def loopversion(versions):
     for key,value in versions.items():
         if key=="cesstd":
             #read file
-            with open(f"{repo}/version-standard-ces.yaml","r") as file:
+            with open(f"{repo}/opsmgmt/version-standard-ces.yaml","r") as file:
                 data = yaml.load(file)
             #modify values
             data["image"]["tag"] = DoubleQuotedScalarString(value)
             # write back
-            with open(f"{repo}/version-standard-ces.yaml", "w") as file:
+            with open(f"{repo}/opsmgmt/version-standard-ces.yaml", "w") as file:
                 yaml.dump(data, file)
         elif key=="cesplt":
             #read file
-            with open(f"{repo}/version-platinum-ces.yaml","r") as file:
+            with open(f"{repo}/opsmgmt/version-platinum-ces.yaml","r") as file:
                 data = yaml.load(file)
             #modify values
             data["image"]["tag"] = DoubleQuotedScalarString(value)
             # write back
-            with open(f"{repo}/version-platinum-ces.yaml", "w") as file:
+            with open(f"{repo}/opsmgmt/version-platinum-ces.yaml", "w") as file:
                 yaml.dump(data, file)
         elif key=="twxstd":
             #read file
-            with open(f"{repo}/version-standard-twx.yaml","r") as file:
+            with open(f"{repo}/opsmgmt/version-standard-twx.yaml","r") as file:
                 data = yaml.load(file)
             #modify values
             data["image"]["tag"] = DoubleQuotedScalarString(value)
             # write back
-            with open(f"{repo}/version-standard-twx.yaml", "w") as file:
+            with open(f"{repo}/opsmgmt/version-standard-twx.yaml", "w") as file:
                 yaml.dump(data, file)
         elif key=="twxplt":
             #read file
-            with open(f"{repo}/version-platinum-twx.yaml","r") as file:
+            with open(f"{repo}/opsmgmt/version-platinum-twx.yaml","r") as file:
                 data = yaml.load(file)
             #modify values
             data["image"]["tag"] = DoubleQuotedScalarString(value)
             # write back
-            with open(f"{repo}/version-platinum-twx.yaml", "w") as file:
+            with open(f"{repo}/opsmgmt/version-platinum-twx.yaml", "w") as file:
                 yaml.dump(data, file)
         elif key=="dbices":
             #read file
-            with open(f"{repo}/version-dbi-ces.yaml","r") as file:
+            with open(f"{repo}/opsmgmt/version-dbi-ces.yaml","r") as file:
                 data = yaml.load(file)
             #modify values
             data["image"]["tag"] = DoubleQuotedScalarString(value)
             # write back
-            with open(f"{repo}/version-dbi-ces.yaml", "w") as file:
+            with open(f"{repo}/opsmgmt/version-dbi-ces.yaml", "w") as file:
                 yaml.dump(data, file)
         elif key=="dbitwx":
             #read file
-            with open(f"{repo}/version-dbi-twx.yaml","r") as file:
+            with open(f"{repo}/opsmgmt/version-dbi-twx.yaml","r") as file:
                 data = yaml.load(file)
             #modify values
             data["image"]["tag"] = DoubleQuotedScalarString(value)
             # write back
-            with open(f"{repo}/version-dbi-twx.yaml", "w") as file:
+            with open(f"{repo}/opsmgmt/version-dbi-twx.yaml", "w") as file:
                 yaml.dump(data, file)
         else:
             raise Exception("check the versions...")
@@ -277,3 +278,4 @@ else:
     raise Exception("Invalid Environment, Select Environment Prod or UAT")
 
 print("Updated tag:", versions)
+
