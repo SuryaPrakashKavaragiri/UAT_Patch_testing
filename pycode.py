@@ -1,0 +1,197 @@
+import subprocess
+from ruamel.yaml import YAML
+from ruamel.yaml.scalarstring import DoubleQuotedScalarString
+import os
+from datetime import datetime
+
+yaml = YAML()
+yaml.default_flow_style=False
+
+env=os.getenv("ENVIRONMENT")
+if not env:
+    raise Exception("ENVIRONMENT not provided")
+
+service_env = os.getenv("CES_TWX")
+if not service_env:
+    raise Exception("CES_TWX not provided")
+service_type=service_env.split(",")
+
+version_env = os.getenv("VERSION_TYPE")
+if not version_env:
+    raise Exception("VERSION_TYPE not provided")
+version_type = version_env.split(",")
+
+
+def function():
+    if not service_type:
+        raise Exception("Invalid Service, Select Service to patch")
+
+    if len(service_type)==2:
+        if len(version_type)==2:
+            versions={"cesstd":os.getenv("CES_STD_VERSION"),"cesplt":os.getenv("CES_PLT_VERSION"),"twxstd":os.getenv("TWX_STD_VERSION"),"twxplt":os.getenv("TWX_PLT_VERSION")}
+        elif len(version_type)==1:
+            if "standard" in version_type and env=="dbi":
+                versions={"dbices":os.getenv("DBICES_STD_VERSION"),"dbitwx":os.getenv("DBITWX_STD_VERSION")}
+            elif "standard" in version_type:
+                versions={"cesstd":os.getenv("CES_STD_VERSION"),"twxstd":os.getenv("TWX_STD_VERSION")}
+            else:
+                versions={"cesplt":os.getenv("CES_PLT_VERSION"),"twxplt":os.getenv("TWX_PLT_VERSION")}
+            
+    elif len(service_type)==1:
+        if not version_type:
+            raise Exception("Invalid service Type, select 'ces or twx'")     
+        if "ces" in service_type:
+            if len(version_type)==2:
+                versions={"cesstd":os.getenv("CES_STD_VERSION"),"cesplt":os.getenv("CES_PLT_VERSION")}
+            elif len(version_type)==1:
+                if "standard" in version_type:
+                    versions={"cesstd":os.getenv("CES_STD_VERSION")}
+                elif "platinum" in version_type:
+                    versions={"cesplt":os.getenv("CES_PLT_VERSION")}
+                else:
+                    raise Exception("Invalid Version Type, select 'standard or platinum'")
+        elif "twx" in service_type:
+            if len(version_type)==2:
+                versions={"twxstd":os.getenv("TWX_STD_VERSION"),"twxplt":os.getenv("TWX_PLT_VERSION")}
+            elif len(version_type)==1:
+                if "standard" in version_type:
+                    versions={"twxstd":os.getenv("TWX_STD_VERSION")}
+                elif "platinum" in version_type:
+                    versions={"twxplt":os.getenv("TWX_PLT_VERSION")}
+                else:
+                    raise Exception("Invalid Version Type, select 'standard or platinum'")
+        else:
+            raise Exception("Invalid service Type, select 'ces' or 'twx'")
+    return versions
+
+versions=function()
+today_date=datetime.now()
+month_date=today_date.strftime("%b%d-%H:%M:%S")
+
+repo=r"C:/ProgramData/Jenkins/.jenkins/workspace/test-uat-deploy/opsmgmt"
+
+def loopversion(versions):
+    for key,value in versions.items():
+        if key=="cesstd":
+            #read file
+            with open(f"{repo}/version-standard-ces.yaml","r") as file:
+                data = yaml.load(file)
+            #modify values
+            data["image"]["tag"] = DoubleQuotedScalarString(value)
+            # write back
+            with open(f"{repo}/version-standard-ces.yaml", "w") as file:
+                yaml.dump(data, file)
+        elif key=="cesplt":
+            #read file
+            with open(f"{repo}/version-platinum-ces.yaml","r") as file:
+                data = yaml.load(file)
+            #modify values
+            data["image"]["tag"] = DoubleQuotedScalarString(value)
+            # write back
+            with open(f"{repo}/version-platinum-ces.yaml", "w") as file:
+                yaml.dump(data, file)
+        elif key=="twxstd":
+            #read file
+            with open(f"{repo}/version-standard-twx.yaml","r") as file:
+                data = yaml.load(file)
+            #modify values
+            data["image"]["tag"] = DoubleQuotedScalarString(value)
+            # write back
+            with open(f"{repo}/version-standard-twx.yaml", "w") as file:
+                yaml.dump(data, file)
+        elif key=="twxplt":
+            #read file
+            with open(f"{repo}/version-platinum-twx.yaml","r") as file:
+                data = yaml.load(file)
+            #modify values
+            data["image"]["tag"] = DoubleQuotedScalarString(value)
+            # write back
+            with open(f"{repo}/version-platinum-twx.yaml", "w") as file:
+                yaml.dump(data, file)
+        elif key=="dbices":
+            #read file
+            with open(f"{repo}/version-dbi-ces.yaml","r") as file:
+                data = yaml.load(file)
+            #modify values
+            data["image"]["tag"] = DoubleQuotedScalarString(value)
+            # write back
+            with open(f"{repo}/version-dbi-ces.yaml", "w") as file:
+                yaml.dump(data, file)
+        elif key=="dbitwx":
+            #read file
+            with open(f"{repo}/version-dbi-twx.yaml","r") as file:
+                data = yaml.load(file)
+            #modify values
+            data["image"]["tag"] = DoubleQuotedScalarString(value)
+            # write back
+            with open(f"{repo}/version-dbi-twx.yaml", "w") as file:
+                yaml.dump(data, file)
+        else:
+            raise Exception("check the versions...")
+
+
+if env=="prod":
+    gitchangebranch=subprocess.run(["git","checkout","prod-k8s-c02"],cwd=repo,capture_output=True,text=True,check=True).stdout
+    gitpull=subprocess.run(["git","pull"],cwd=repo,capture_output=True,text=True).stdout
+    gitpull=subprocess.run(["git","pull"],cwd=repo,capture_output=True,text=True).stdout
+    print(gitpull)
+    newbranch=f"{month_date}-Prod-Patching" #f"prod/{month_date}-UAT-Patching"
+    gitbranch=subprocess.run(["git","checkout","-b",newbranch],cwd=repo,check=True)
+    
+    loopversion(versions)
+    
+    gitdiff= subprocess.run(["git","diff"],cwd=repo,capture_output=True,text=True).stdout
+    print(gitdiff)
+    gitstatus=subprocess.run(["git","status"],cwd=repo,capture_output=True,text=True).stdout
+    print(gitstatus)
+    gitadd=subprocess.run(["git","add","-A"],cwd=repo,check=True)
+    commitmsg=f"PROD Patching standard CES:{versions['cesstd']} & standard TWX:{versions['twxstd']}"
+    gitcommit=subprocess.run(["git","commit","-m",commitmsg],cwd=repo)
+    gitpush=subprocess.run(["git","push","--set-upstream","origin",newbranch],cwd=repo,check=True)
+
+    
+elif env=="dbi":
+    gitchangebranch=subprocess.run(["git","checkout","prod-k8s-c02"],cwd=repo,capture_output=True,text=True,check=True).stdout
+    gitpull=subprocess.run(["git","pull"],cwd=repo,capture_output=True,text=True).stdout
+    gitpull=subprocess.run(["git","pull"],cwd=repo,capture_output=True,text=True).stdout
+    print(gitpull)
+    newbranch=f"{month_date}-DBI-Patching" #f"prod/{month_date}-UAT-Patching"
+    gitbranch=subprocess.run(["git","checkout","-b",newbranch],cwd=repo,check=True)
+    
+    loopversion(versions)
+
+    gitdiff= subprocess.run(["git","diff"],cwd=repo,capture_output=True,text=True).stdout
+    print(gitdiff)
+    gitstatus=subprocess.run(["git","status"],cwd=repo,capture_output=True,text=True).stdout
+    print(gitstatus)
+    gitadd=subprocess.run(["git","add","-A"],cwd=repo,check=True)
+    commitmsg=f"DBI Patching CES:{versions['dbices']} & TWX:{versions['dbitwx']}"
+    gitcommit=subprocess.run(["git","commit","-m",commitmsg],cwd=repo,check=True)
+    gitpush=subprocess.run(["git","push","--set-upstream","origin",newbranch],cwd=repo,check=True)
+
+
+elif env=="uat":
+    gitchangebranch=subprocess.run(["git","checkout","uat-oke-c01"],cwd=repo,capture_output=True,text=True,check=True).stdout
+    gitpull=subprocess.run(["git","pull"],cwd=repo,capture_output=True,text=True).stdout
+    gitpull=subprocess.run(["git","pull"],cwd=repo,capture_output=True,text=True).stdout
+    print(gitpull)
+    newbranch=f"{month_date}-UAT-Patching" #f"uat-ash/{month_date}-UAT-Patching"
+    gitbranch=subprocess.run(["git","checkout","-b",newbranch],cwd=repo,check=True)
+    
+    loopversion(versions)
+    
+    gitdiff= subprocess.run(["git","diff"],cwd=repo,capture_output=True,text=True).stdout
+    print(gitdiff)
+    gitstatus=subprocess.run(["git","status"],cwd=repo,capture_output=True,text=True).stdout
+    print(gitstatus)
+    gitadd=subprocess.run(["git","add","-A"],cwd=repo,check=True)
+    commitmsg=f"UAT Patching standard CES:{versions['cesstd']} & standard TWX:{versions['twxstd']}"
+    gitcommit=subprocess.run(["git","commit","-m",commitmsg],cwd=repo,check=True)
+    gitpush=subprocess.run(["git","push","--set-upstream","origin",newbranch],cwd=repo,check=True)
+
+
+else:
+    raise Exception("Invalid Environment, Select Environment Prod or UAT")
+
+print("Updated tag:", versions)
+
