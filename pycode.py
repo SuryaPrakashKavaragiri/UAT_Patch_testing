@@ -118,8 +118,8 @@ def build_commit_message(env, versions):
 today_date=datetime.now()
 month_date=today_date.strftime("%b%d-%H%M%S")
 
-#repo = os.getcwd()
-repo=r"C:/ProgramData/Jenkins/.jenkins/workspace/test-uat-deploy"
+repo = os.getcwd()
+#repo=r"C:/ProgramData/Jenkins/.jenkins/workspace/test-uat-deploy"
 
 def loopversion(versions):
     for key,value in versions.items():
