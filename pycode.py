@@ -245,6 +245,9 @@ elif env=="dbi":
 
 elif env=="uat":
     gitchangebranch=subprocess.run(["git","checkout","uat-oke-c01"],cwd=repo,capture_output=True,text=True,check=True).stdout
+    print("Checkout output:")
+    print(gitchangebranch.stdout)
+    print(gitchangebranch.stderr)
     gitpull=subprocess.run(["git","pull"],cwd=repo,capture_output=True,text=True).stdout
     gitpull=subprocess.run(["git","pull"],cwd=repo,capture_output=True,text=True).stdout
     print(gitpull)
