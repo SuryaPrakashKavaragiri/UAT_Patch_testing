@@ -111,6 +111,7 @@ def build_commit_message(env, versions):
     version_parts = []
 
     for key, value in versions.items():
+        value = value.strip().rstrip(",")
         version_parts.append(f"{key.upper()}:{value}")
 
     return f"{env.upper()} Patching - " + " | ".join(version_parts)
