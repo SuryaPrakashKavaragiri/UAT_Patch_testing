@@ -182,7 +182,10 @@ def loopversion(versions):
 
 
 if env=="prod":
-    gitchangebranch=subprocess.run(["git","checkout","prod-k8s-c02"],cwd=repo,capture_output=True,text=True,check=True).stdout
+    gitchangebranch=subprocess.run(["git","checkout","prod-k8s-c02"],cwd=repo,capture_output=True,text=True,check=True)
+    print("Checkout output:")
+    print(gitchangebranch.stdout)
+    print(gitchangebranch.stderr)
     #gitpull=subprocess.run(["git","pull"],cwd=repo,capture_output=True,text=True).stdout
     gitpull=subprocess.run(["git","pull","origin","prod-k8s-c02"],cwd=repo,capture_output=True,text=True)
     print(gitpull.stdout)
@@ -214,7 +217,10 @@ if env=="prod":
     print("=" * 80)
 
 elif env=="dbi":
-    gitchangebranch=subprocess.run(["git","checkout","prod-k8s-c02"],cwd=repo,capture_output=True,text=True,check=True).stdout
+    gitchangebranch=subprocess.run(["git","checkout","prod-k8s-c02"],cwd=repo,capture_output=True,text=True,check=True)
+    print("Checkout output:")
+    print(gitchangebranch.stdout)
+    print(gitchangebranch.stderr)
     #gitpull=subprocess.run(["git","pull"],cwd=repo,capture_output=True,text=True).stdout
     gitpull=subprocess.run(["git","pull","origin","prod-k8s-c02"],cwd=repo,capture_output=True,text=True)
     print(gitpull.stdout)
