@@ -182,14 +182,14 @@ def loopversion(versions):
 
 
 if env=="prod":
-    gitchangebranch=subprocess.run(["git","checkout","prod-k8s-c02"],cwd=repo,capture_output=True,text=True,check=True)
+    gitchangebranch=subprocess.run(["git","checkout","-B","prod-k8s-c02","origin/prod-k8s-c02"],cwd=repo,check=True)
     print("Checkout output:")
     print(gitchangebranch.stdout)
     print(gitchangebranch.stderr)
     #gitpull=subprocess.run(["git","pull"],cwd=repo,capture_output=True,text=True).stdout
-    gitpull=subprocess.run(["git","pull","origin","prod-k8s-c02"],cwd=repo,capture_output=True,text=True)
-    print(gitpull.stdout)
-    print(gitpull.stderr)
+    # gitpull=subprocess.run(["git","pull","origin","prod-k8s-c02"],cwd=repo,capture_output=True,text=True)
+    # print(gitpull.stdout)
+    # print(gitpull.stderr)
     newbranch=f"{month_date}-Prod-Patching" #f"prod/{month_date}-UAT-Patching"
     gitbranch=subprocess.run(["git","checkout","-b",newbranch],cwd=repo,check=True)
     
@@ -217,14 +217,14 @@ if env=="prod":
     print("=" * 80)
 
 elif env=="dbi":
-    gitchangebranch=subprocess.run(["git","checkout","prod-k8s-c02"],cwd=repo,capture_output=True,text=True,check=True)
+    gitchangebranch=subprocess.run(["git","checkout","-B","prod-k8s-c02","origin/prod-k8s-c02"],cwd=repo,check=True)
     print("Checkout output:")
     print(gitchangebranch.stdout)
     print(gitchangebranch.stderr)
     #gitpull=subprocess.run(["git","pull"],cwd=repo,capture_output=True,text=True).stdout
-    gitpull=subprocess.run(["git","pull","origin","prod-k8s-c02"],cwd=repo,capture_output=True,text=True)
-    print(gitpull.stdout)
-    print(gitpull.stderr)
+    #gitpull=subprocess.run(["git","pull","origin","prod-k8s-c02"],cwd=repo,capture_output=True,text=True)
+    # print(gitpull.stdout)
+    # print(gitpull.stderr)
     newbranch=f"{month_date}-DBI-Patching" #f"prod/{month_date}-UAT-Patching"
     gitbranch=subprocess.run(["git","checkout","-b",newbranch],cwd=repo,check=True)
     
@@ -252,14 +252,14 @@ elif env=="dbi":
     print("=" * 80)
 
 elif env=="uat":
-    gitchangebranch=subprocess.run(["git","checkout","uat-oke-c01"],cwd=repo,capture_output=True,text=True,check=True)
+    gitchangebranch=subprocess.run(["git","checkout","-B","uat-oke-c01","origin/uat-oke-c01"],cwd=repo,check=True)
     print("Checkout output:")
     print(gitchangebranch.stdout)
     print(gitchangebranch.stderr)
     #gitpull=subprocess.run(["git","pull"],cwd=repo,capture_output=True,text=True)
-    gitpull=subprocess.run(["git","pull","origin","uat-oke-c01"],cwd=repo,capture_output=True,text=True)
-    print(gitpull.stdout)
-    print(gitpull.stderr)
+    # gitpull=subprocess.run(["git","pull","origin","uat-oke-c01"],cwd=repo,capture_output=True,text=True)
+    # print(gitpull.stdout)
+    # print(gitpull.stderr)
     newbranch=f"{month_date}-UAT-Patching" #f"uat-ash/{month_date}-UAT-Patching"
     gitbranch=subprocess.run(["git","checkout","-b",newbranch],cwd=repo,check=True)
     
