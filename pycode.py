@@ -188,10 +188,6 @@ if env=="prod":
     print("Checkout output:")
     print(gitchangebranch.stdout)
     print(gitchangebranch.stderr)
-    #gitpull=subprocess.run(["git","pull"],cwd=repo,capture_output=True,text=True).stdout
-    # gitpull=subprocess.run(["git","pull","origin","prod-k8s-c02"],cwd=repo,capture_output=True,text=True)
-    # print(gitpull.stdout)
-    # print(gitpull.stderr)
     newbranch=f"{month_date}-Prod-Patching" #f"prod/{month_date}-UAT-Patching"
     gitbranch=subprocess.run(["git","checkout","-b",newbranch],cwd=repo,check=True)
     
@@ -225,10 +221,6 @@ elif env=="dbi":
     print("Checkout output:")
     print(gitchangebranch.stdout)
     print(gitchangebranch.stderr)
-    #gitpull=subprocess.run(["git","pull"],cwd=repo,capture_output=True,text=True).stdout
-    #gitpull=subprocess.run(["git","pull","origin","prod-k8s-c02"],cwd=repo,capture_output=True,text=True)
-    # print(gitpull.stdout)
-    # print(gitpull.stderr)
     newbranch=f"{month_date}-DBI-Patching" #f"prod/{month_date}-UAT-Patching"
     gitbranch=subprocess.run(["git","checkout","-b",newbranch],cwd=repo,check=True)
     
@@ -262,42 +254,9 @@ elif env=="uat":
     print("Checkout output:")
     print(gitchangebranch.stdout)
     print(gitchangebranch.stderr)
-    #gitpull=subprocess.run(["git","pull"],cwd=repo,capture_output=True,text=True)
-    # gitpull=subprocess.run(["git","pull","origin","uat-oke-c01"],cwd=repo,capture_output=True,text=True)
-    # print(gitpull.stdout)
-    # print(gitpull.stderr)
     newbranch=f"{month_date}-UAT-Patching" #f"uat-ash/{month_date}-UAT-Patching"
     gitbranch=subprocess.run(["git","checkout","-b",newbranch],cwd=repo,check=True)
-    
-
-
-
-    # print("Current branch:")
-    # print(
-    #     subprocess.run(
-    #         ["git", "branch", "--show-current"],
-    #         cwd=repo,
-    #         capture_output=True,
-    #         text=True
-    #     ).stdout
-    # )
-
-    # print("Workspace:", repo)
-    # print("Workspace contents:")
-    # print(os.listdir(repo))
-
-    # ops_path = os.path.join(repo, "opsmgmt")
-    # print("opsmgmt exists:", os.path.exists(ops_path))
-
-    # if os.path.exists(ops_path):
-    #     print("opsmgmt contents:")
-    #     print(os.listdir(ops_path))
-
-
-
-
-
-
+   
     loopversion(versions)
     
     gitdiff= subprocess.run(["git","diff"],cwd=repo,capture_output=True,text=True).stdout
