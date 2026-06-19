@@ -244,7 +244,7 @@ elif env=="dbi":
     print("=" * 80)
 
 elif env=="uat":
-    gitchangebranch=subprocess.run(["git","checkout","uat-oke-c01"],cwd=repo,capture_output=True,text=True,check=True).stdout
+    gitchangebranch=subprocess.run(["git","checkout","uat-oke-c01"],cwd=repo,capture_output=True,text=True,check=True)
     print("Checkout output:")
     print(gitchangebranch.stdout)
     print(gitchangebranch.stderr)
