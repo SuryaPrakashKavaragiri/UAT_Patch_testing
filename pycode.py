@@ -123,6 +123,7 @@ repo = os.getcwd()
 
 def loopversion(versions):
     for key,value in versions.items():
+        value = value.strip().rstrip(",")
         if key=="cesstd":
             #read file
             with open(f"{repo}/opsmgmt/version-standard-ces.yaml","r") as file:
@@ -200,6 +201,8 @@ if env=="prod":
     gitstatus=subprocess.run(["git","status"],cwd=repo,capture_output=True,text=True).stdout
     print(gitstatus)
     gitadd=subprocess.run(["git","add","-A"],cwd=repo,check=True)
+    gitconfigname=subprocess.run(["git","config","user.name","skavaragiri"],cwd=repo,check=True)
+    gitconfigemail=subprocess.run(["git","config","user.email","skavaragiri@crunchtime.com"],cwd=repo,check=True)
     commitmsg = build_commit_message(env, versions)
     gitcommit=subprocess.run(["git","commit","-m",commitmsg],cwd=repo,check=True)
     gitpush=subprocess.run(["git","push","--set-upstream","origin",newbranch],cwd=repo,check=True)
@@ -235,6 +238,8 @@ elif env=="dbi":
     gitstatus=subprocess.run(["git","status"],cwd=repo,capture_output=True,text=True).stdout
     print(gitstatus)
     gitadd=subprocess.run(["git","add","-A"],cwd=repo,check=True)
+    gitconfigname=subprocess.run(["git","config","user.name","skavaragiri"],cwd=repo,check=True)
+    gitconfigemail=subprocess.run(["git","config","user.email","skavaragiri@crunchtime.com"],cwd=repo,check=True)
     commitmsg = build_commit_message(env, versions)
     gitcommit=subprocess.run(["git","commit","-m",commitmsg],cwd=repo,check=True)
     gitpush=subprocess.run(["git","push","--set-upstream","origin",newbranch],cwd=repo,check=True)
@@ -266,26 +271,26 @@ elif env=="uat":
 
 
 
-    print("Current branch:")
-    print(
-        subprocess.run(
-            ["git", "branch", "--show-current"],
-            cwd=repo,
-            capture_output=True,
-            text=True
-        ).stdout
-    )
+    # print("Current branch:")
+    # print(
+    #     subprocess.run(
+    #         ["git", "branch", "--show-current"],
+    #         cwd=repo,
+    #         capture_output=True,
+    #         text=True
+    #     ).stdout
+    # )
 
-    print("Workspace:", repo)
-    print("Workspace contents:")
-    print(os.listdir(repo))
+    # print("Workspace:", repo)
+    # print("Workspace contents:")
+    # print(os.listdir(repo))
 
-    ops_path = os.path.join(repo, "opsmgmt")
-    print("opsmgmt exists:", os.path.exists(ops_path))
+    # ops_path = os.path.join(repo, "opsmgmt")
+    # print("opsmgmt exists:", os.path.exists(ops_path))
 
-    if os.path.exists(ops_path):
-        print("opsmgmt contents:")
-        print(os.listdir(ops_path))
+    # if os.path.exists(ops_path):
+    #     print("opsmgmt contents:")
+    #     print(os.listdir(ops_path))
 
 
 
@@ -299,6 +304,8 @@ elif env=="uat":
     gitstatus=subprocess.run(["git","status"],cwd=repo,capture_output=True,text=True).stdout
     print(gitstatus)
     gitadd=subprocess.run(["git","add","-A"],cwd=repo,check=True)
+    gitconfigname=subprocess.run(["git","config","user.name","skavaragiri"],cwd=repo,check=True)
+    gitconfigemail=subprocess.run(["git","config","user.email","skavaragiri@crunchtime.com"],cwd=repo,check=True)
     commitmsg = build_commit_message(env, versions)
     gitcommit=subprocess.run(["git","commit","-m",commitmsg],cwd=repo,check=True)
     gitpush=subprocess.run(["git","push","--set-upstream","origin",newbranch],cwd=repo,check=True)
