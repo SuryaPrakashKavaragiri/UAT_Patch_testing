@@ -253,7 +253,36 @@ elif env=="uat":
     print(gitpull)
     newbranch=f"{month_date}-UAT-Patching" #f"uat-ash/{month_date}-UAT-Patching"
     gitbranch=subprocess.run(["git","checkout","-b",newbranch],cwd=repo,check=True)
-    
+   
+
+
+
+
+    print("Current branch:")
+    print(
+        subprocess.run(
+            ["git", "branch", "--show-current"],
+            cwd=repo,
+            capture_output=True,
+            text=True
+        ).stdout
+    )
+
+    print("Workspace:", repo)
+    print("Workspace contents:")
+    print(os.listdir(repo))
+
+    ops_path = os.path.join(repo, "opsmgmt")
+    print("opsmgmt exists:", os.path.exists(ops_path))
+
+    if os.path.exists(ops_path):
+        print("opsmgmt contents:")
+        print(os.listdir(ops_path))
+
+
+
+
+
     loopversion(versions)
     
     gitdiff= subprocess.run(["git","diff"],cwd=repo,capture_output=True,text=True).stdout
