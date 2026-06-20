@@ -17,7 +17,6 @@ def create_pr(repo_owner, repo_name, source_branch, target_branch, title, body):
     if not token:
         raise Exception("GITHUB_TOKEN environment variable not found")
 
-
     headers = {
         "Authorization": f"Bearer {token}",
         "Accept": "application/vnd.github+json"
@@ -122,6 +121,24 @@ month_date=today_date.strftime("%b%d-%H%M%S")
 repo = os.getcwd()
 #repo=r"C:/ProgramData/Jenkins/.jenkins/workspace/test-uat-deploy"
 
+github_username = os.getenv("GITHUB_USERNAME")
+github_token = os.getenv("GITHUB_TOKEN")
+if not github_username:
+    raise Exception("GITHUB_USERNAME environment variable not found")
+if not github_token:
+    raise Exception("GITHUB_TOKEN environment variable not found")
+
+
+def configure_https_remote():
+    subprocess.run([
+        "git",
+        "remote",
+        "set-url",
+        "origin",
+        f"https://{github_username}:{github_token}@github.com/SuryaPrakashKavaragiri/UAT_Patch_testing.git"
+    ], cwd=repo, check=True)
+
+
 def loopversion(versions):
     for key,value in versions.items():
         value = value.strip().rstrip(",")
@@ -202,6 +219,9 @@ if env=="prod":
     gitconfigemail=subprocess.run(["git","config","user.email","skavaragiri@crunchtime.com"],cwd=repo,check=True)
     commitmsg = build_commit_message(env, versions)
     gitcommit=subprocess.run(["git","commit","-m",commitmsg],cwd=repo,check=True)
+
+    configure_https_remote()
+
     gitpush=subprocess.run(["git","push","--set-upstream","origin",newbranch],cwd=repo,check=True)
     pr_url = create_pr(
     repo_owner="SuryaPrakashKavaragiri",
@@ -235,6 +255,9 @@ elif env=="dbi":
     gitconfigemail=subprocess.run(["git","config","user.email","skavaragiri@crunchtime.com"],cwd=repo,check=True)
     commitmsg = build_commit_message(env, versions)
     gitcommit=subprocess.run(["git","commit","-m",commitmsg],cwd=repo,check=True)
+    
+    configure_https_remote()
+
     gitpush=subprocess.run(["git","push","--set-upstream","origin",newbranch],cwd=repo,check=True)
     pr_url = create_pr(
     repo_owner="SuryaPrakashKavaragiri",
@@ -268,7 +291,12 @@ elif env=="uat":
     gitconfigemail=subprocess.run(["git","config","user.email","skavaragiri@crunchtime.com"],cwd=repo,check=True)
     commitmsg = build_commit_message(env, versions)
     gitcommit=subprocess.run(["git","commit","-m",commitmsg],cwd=repo,check=True)
-    gitpush=subprocess.run(["git","push","--set-upstream","origin",newbranch],cwd=repo,check=True)
+    
+    configure_https_remote()
+
+    gitpush=subprocess.run(["git","push","--set-upstream","origin",newbranch],
+                           cwd=repo,
+                           check=True)
     pr_url = create_pr(
     repo_owner="SuryaPrakashKavaragiri",
     repo_name="UAT_Patch_testing",
