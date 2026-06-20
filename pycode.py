@@ -121,7 +121,7 @@ month_date=today_date.strftime("%b%d-%H%M%S")
 repo = os.getcwd()
 #repo=r"C:/ProgramData/Jenkins/.jenkins/workspace/test-uat-deploy"
 
-github_username = os.getenv("GITHUB_USERNAME")
+github_username = "SuryaPrakashKavaragiri"
 github_token = os.getenv("GITHUB_TOKEN")
 if not github_username:
     raise Exception("GITHUB_USERNAME environment variable not found")
