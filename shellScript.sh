@@ -66,6 +66,7 @@ configure_remote() {
 git push \
 https://${GITHUB_USERNAME}:${GITHUB_PR_TOKEN}@github.com/${REPO_OWNER}/${REPO_NAME}.git \
 "$NEW_BRANCH"
+}
 
 #########################################
 
