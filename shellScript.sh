@@ -29,11 +29,9 @@ update_tag() {
 FILE=$1
 VERSION=$2
 
-```
 echo "Updating $FILE -> $VERSION"
 
 sed -i -E 's/^([[:space:]]*tag:).*/\1 "'"$VERSION"'"/' "$FILE"
-```
 
 }
 
@@ -46,13 +44,11 @@ sed -i -E 's/^([[:space:]]*tag:).*/\1 "'"$VERSION"'"/' "$FILE"
 build_commit_message() {
 local msg="${ENVIRONMENT^^} Patching"
 
-```
 for pair in "$@"; do
     msg="$msg | $pair"
 done
 
 echo "$msg"
-```
 
 }
 
@@ -67,7 +63,6 @@ git push \
 https://${GITHUB_USERNAME}:${GITHUB_PR_TOKEN}@github.com/${REPO_OWNER}/${REPO_NAME}.git \
 "$NEW_BRANCH"
 }
-
 #########################################
 
 # Create PR
@@ -79,7 +74,6 @@ local source_branch=$1
 local target_branch=$2
 local title=$3
 
-```
 echo "Creating PR..."
 echo "Source branch: $source_branch"
 echo "Target branch: $target_branch"
@@ -102,7 +96,6 @@ echo "======================================================"
 echo "REVIEW THIS PULL REQUEST"
 echo "$PR_URL"
 echo "======================================================"
-```
 
 }
 
@@ -117,36 +110,7 @@ COMMIT_PARTS=()
 IFS=',' read -ra SERVICES <<< "$CES_TWX"
 IFS=',' read -ra TYPES <<< "$VERSION_TYPE"
 
-for SERVICE in "${SERVICES[@]}"; do
 
-```
-if [[ "$SERVICE" == "ces" ]]; then
-
-    if [[ "$VERSION_TYPE" == *"standard"* ]]; then
-        update_tag "$REPO/opsmgmt/version-standard-ces.yaml" "$CES_STD_VERSION"
-        COMMIT_PARTS+=("CESSTD:$CES_STD_VERSION")
-    fi
-
-    if [[ "$VERSION_TYPE" == *"platinum"* ]]; then
-        update_tag "$REPO/opsmgmt/version-platinum-ces.yaml" "$CES_PLT_VERSION"
-        COMMIT_PARTS+=("CESPLT:$CES_PLT_VERSION")
-    fi
-
-elif [[ "$SERVICE" == "twx" ]]; then
-
-    if [[ "$VERSION_TYPE" == *"standard"* ]]; then
-        update_tag "$REPO/opsmgmt/version-standard-twx.yaml" "$TWX_STD_VERSION"
-        COMMIT_PARTS+=("TWXSTD:$TWX_STD_VERSION")
-    fi
-
-    if [[ "$VERSION_TYPE" == *"platinum"* ]]; then
-        update_tag "$REPO/opsmgmt/version-platinum-twx.yaml" "$TWX_PLT_VERSION"
-        COMMIT_PARTS+=("TWXPLT:$TWX_PLT_VERSION")
-    fi
-fi
-```
-
-done
 
 #########################################
 
@@ -187,13 +151,44 @@ git checkout -B "$BASE_BRANCH" "origin/$BASE_BRANCH"
 
 git checkout -b "$NEW_BRANCH"
 
+
+for SERVICE in "${SERVICES[@]}"; do
+
+if [[ "$SERVICE" == "ces" ]]; then
+
+    if [[ "$VERSION_TYPE" == *"standard"* ]]; then
+        update_tag "$REPO/opsmgmt/version-standard-ces.yaml" "$CES_STD_VERSION"
+        COMMIT_PARTS+=("CESSTD:$CES_STD_VERSION")
+    fi
+
+    if [[ "$VERSION_TYPE" == *"platinum"* ]]; then
+        update_tag "$REPO/opsmgmt/version-platinum-ces.yaml" "$CES_PLT_VERSION"
+        COMMIT_PARTS+=("CESPLT:$CES_PLT_VERSION")
+    fi
+
+elif [[ "$SERVICE" == "twx" ]]; then
+
+    if [[ "$VERSION_TYPE" == *"standard"* ]]; then
+        update_tag "$REPO/opsmgmt/version-standard-twx.yaml" "$TWX_STD_VERSION"
+        COMMIT_PARTS+=("TWXSTD:$TWX_STD_VERSION")
+    fi
+
+    if [[ "$VERSION_TYPE" == *"platinum"* ]]; then
+        update_tag "$REPO/opsmgmt/version-platinum-twx.yaml" "$TWX_PLT_VERSION"
+        COMMIT_PARTS+=("TWXPLT:$TWX_PLT_VERSION")
+    fi
+fi
+
+done
+
+
 git diff
 git status
 
 git add -A
 
 git config user.name "skavaragiri"
-git config user.email "[skavaragiri@crunchtime.com](mailto:skavaragiri@crunchtime.com)"
+git config user.email "skavaragiri@crunchtime.com"
 
 COMMIT_MSG=$(build_commit_message "${COMMIT_PARTS[@]}")
 
@@ -201,7 +196,7 @@ git commit -m "$COMMIT_MSG"
 
 configure_remote
 
-git push --set-upstream origin "$NEW_BRANCH"
+#git push --set-upstream origin "$NEW_BRANCH"
 
 create_pr "$NEW_BRANCH" "$BASE_BRANCH" "$COMMIT_MSG"
 
