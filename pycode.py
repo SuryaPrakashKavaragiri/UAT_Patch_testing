@@ -12,10 +12,10 @@ yaml.default_flow_style=False
 #token = os.getenv("GITHUB_TOKEN")
 
 def create_pr(repo_owner, repo_name, source_branch, target_branch, title, body):
-    token = os.getenv("GITHUB_TOKEN")
+    token = os.getenv("GITHUB_PR_TOKEN")
 
     if not token:
-        raise Exception("GITHUB_TOKEN environment variable not found")
+        raise Exception("GITHUB_PR_TOKEN environment variable not found")
 
     headers = {
         "Authorization": f"Bearer {token}",
@@ -122,11 +122,11 @@ repo = os.getcwd()
 #repo=r"C:/ProgramData/Jenkins/.jenkins/workspace/test-uat-deploy"
 
 github_username = "SuryaPrakashKavaragiri"
-github_token = os.getenv("GITHUB_TOKEN")
+github_token = os.getenv("GITHUB_PR_TOKEN")
 if not github_username:
     raise Exception("GITHUB_USERNAME environment variable not found")
 if not github_token:
-    raise Exception("GITHUB_TOKEN environment variable not found")
+    raise Exception("GITHUB_PR_TOKEN environment variable not found")
 
 
 def configure_https_remote():
