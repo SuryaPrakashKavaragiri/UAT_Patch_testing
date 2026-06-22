@@ -35,7 +35,7 @@ MONTH_DATE=$(date +"%b%d-%H%M%S")
 
 update_tag() {
 FILE=$1
-VERSION=$2
+VERSION=${2%,}
 
 echo "Updating $FILE -> $VERSION"
 
@@ -66,7 +66,7 @@ echo "$msg"
 
 #########################################
 
-configure_remote() {
+push_remote() {
 git push \
 https://${GITHUB_USERNAME}:${GITHUB_PR_TOKEN}@github.com/${REPO_OWNER}/${REPO_NAME}.git \
 "$NEW_BRANCH"
@@ -86,6 +86,14 @@ echo "Creating PR..."
 echo "Source branch: $source_branch"
 echo "Target branch: $target_branch"
 
+
+echo "Curl version:"
+curl --version
+
+echo "Testing GitHub connectivity..."
+curl -v https://api.github.com
+
+
 response=$(curl -s \
   -X POST \
   -H "Authorization: Bearer $GITHUB_PR_TOKEN" \
@@ -97,6 +105,9 @@ response=$(curl -s \
     \"base\":\"${target_branch}\",
     \"body\":\"Created automatically by Jenkins\"
   }")
+
+echo "Response:"
+echo "$response"
 
 PR_URL=$(echo "$response" | grep -o '"html_url":"[^"]*"' | cut -d'"' -f4)
 
@@ -210,7 +221,7 @@ COMMIT_MSG=$(build_commit_message "${COMMIT_PARTS[@]}")
 
 git commit -m "$COMMIT_MSG"
 
-configure_remote
+push_remote
 
 #git push --set-upstream origin "$NEW_BRANCH"
 
