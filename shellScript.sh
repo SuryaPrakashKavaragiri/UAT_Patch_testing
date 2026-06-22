@@ -1,6 +1,14 @@
 #!/bin/bash
 set -e
 
+
+echo "Current branch before checkout:"
+git branch --show-current
+
+echo "Available remote branches:"
+git branch -r
+
+
 #########################################
 
 # Validate environment variables
@@ -148,6 +156,14 @@ esac
 #########################################
 
 git checkout -B "$BASE_BRANCH" "origin/$BASE_BRANCH"
+
+
+echo "Current branch after checkout:"
+git branch --show-current
+
+echo "opsmgmt contents:"
+ls -la opsmgmt
+
 
 git checkout -b "$NEW_BRANCH"
 
