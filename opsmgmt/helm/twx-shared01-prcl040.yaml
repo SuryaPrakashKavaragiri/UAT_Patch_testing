@@ -1,0 +1,40 @@
+gateway:
+  name: opsmgmt-gateway-01
+  namespace: envoy-gateway-system-01
+
+siteinfo:
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl040.prod.crunchtime.it
+  db_servicename: papaginos_app
+  db_username: web_user
+  web_twxdomain:
+  - papaginos.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl040.prod.crunchtime.it
+  db_servicename: RISEBRANDS_APP
+  db_username: WEB_USER
+  web_twxdomain:
+  - risebrands.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl040.prod.crunchtime.it
+  db_servicename: FRISCHS_APP
+  db_username: WEB_USER
+  web_twxdomain:
+  - frischs.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl040.prod.crunchtime.it
+  db_servicename: QUAKERSTEAK_APP
+  db_username: web_user
+  web_twxdomain:
+  - quakersteak.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl040.prod.crunchtime.it
+  db_servicename: TROPICALSMOOTHIECAFE_APP
+  db_username: WEB_USER
+  web_twxdomain:
+  - tropicalsmoothiecafe.ct-teamworx.com

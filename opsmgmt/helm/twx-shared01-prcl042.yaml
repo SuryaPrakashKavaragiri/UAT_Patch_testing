@@ -1,0 +1,523 @@
+gateway:
+  name: opsmgmt-gateway-02
+  namespace: envoy-gateway-system-02
+
+siteinfo:
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: RGS_APP
+  db_username: web_user
+  web_twxdomain:
+  - rgs.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: PAPAMURPHYS_APP
+  db_username: WEB_USER
+  web_twxdomain:
+  - papamurphys.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: APPLEGREEN_APP
+  db_username: WEB_USER
+  web_twxdomain:
+  - applegreen.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: WEB_USER
+  web_twxdomain:
+  - jimmyjohns.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0002
+  web_twxdomain:
+  - jsfort.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0003
+  web_twxdomain:
+  - bushwood.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0010
+  web_twxdomain:
+  - ghfg.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0014
+  web_twxdomain:
+  - jimmyjohns0014.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0016
+  web_twxdomain:
+  - jimmyjohns0016.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0017
+  web_twxdomain:
+  - jimmyjohns0017.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0019
+  web_twxdomain:
+  - jimmyjohns0019.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0020
+  web_twxdomain:
+  - jimmyjohns0020.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0021
+  web_twxdomain:
+  - jimmyjohns0021.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0022
+  web_twxdomain:
+  - jimmyjohns0022.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0023
+  web_twxdomain:
+  - jimmyjohns0023.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0024
+  web_twxdomain:
+  - jimmyjohns0024.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0025
+  web_twxdomain:
+  - jimmyjohns0025.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0026
+  web_twxdomain:
+  - jimmyjohns0026.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0027
+  web_twxdomain:
+  - jimmyjohns0027.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0028
+  web_twxdomain:
+  - jimmyjohns0028.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0029
+  web_twxdomain:
+  - jimmyjohns0029.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0030
+  web_twxdomain:
+  - jimmyjohns0030.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0031
+  web_twxdomain:
+  - jimmyjohns0031.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0032
+  web_twxdomain:
+  - jimmyjohns0032.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0033
+  web_twxdomain:
+  - jimmyjohns0033.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0034
+  web_twxdomain:
+  - jimmyjohns0034.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0035
+  web_twxdomain:
+  - jimmyjohns0035.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0036
+  web_twxdomain:
+  - jimmyjohns0036.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0037
+  web_twxdomain:
+  - jimmyjohns0037.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0038
+  web_twxdomain:
+  - jimmyjohns0038.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0039
+  web_twxdomain:
+  - jimmyjohns0039.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0040
+  web_twxdomain:
+  - jimmyjohns0040.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0041
+  web_twxdomain:
+  - jimmyjohns0041.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0042
+  web_twxdomain:
+  - jimmyjohns0042.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0043
+  web_twxdomain:
+  - jimmyjohns0043.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0044
+  web_twxdomain:
+  - jimmyjohns0044.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0045
+  web_twxdomain:
+  - jimmyjohns0045.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0046
+  web_twxdomain:
+  - jimmyjohns0046.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0047
+  web_twxdomain:
+  - jimmyjohns0047.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0048
+  web_twxdomain:
+  - jimmyjohns0048.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0049
+  web_twxdomain:
+  - jimmyjohns0049.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0050
+  web_twxdomain:
+  - jimmyjohns0050.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0051
+  web_twxdomain:
+  - jimmyjohns0051.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0052
+  web_twxdomain:
+  - jimmyjohns0052.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0053
+  web_twxdomain:
+  - jimmyjohns0053.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0054
+  web_twxdomain:
+  - jimmyjohns0054.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0055
+  web_twxdomain:
+  - jimmyjohns0055.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0056
+  web_twxdomain:
+  - jimmyjohns0056.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0057
+  web_twxdomain:
+  - jimmyjohns0057.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0058
+  web_twxdomain:
+  - jimmyjohns0058.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0059
+  web_twxdomain:
+  - jimmyjohns0059.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0060
+  web_twxdomain:
+  - jimmyjohns0060.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0061
+  web_twxdomain:
+  - jimmyjohns0061.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0062
+  web_twxdomain:
+  - jimmyjohns0062.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0063
+  web_twxdomain:
+  - jimmyjohns0063.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0064
+  web_twxdomain:
+  - jimmyjohns0064.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0065
+  web_twxdomain:
+  - jimmyjohns0065.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0066
+  web_twxdomain:
+  - jimmyjohns0066.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0067
+  web_twxdomain:
+  - jimmyjohns0067.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0068
+  web_twxdomain:
+  - jimmyjohns0068.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0069
+  web_twxdomain:
+  - jimmyjohns0069.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0070
+  web_twxdomain:
+  - jimmyjohns0070.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0071
+  web_twxdomain:
+  - jimmyjohns0071.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0072
+  web_twxdomain:
+  - jimmyjohns0072.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0073
+  web_twxdomain:
+  - jimmyjohns0073.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0074
+  web_twxdomain:
+  - jimmyjohns0074.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0075
+  web_twxdomain:
+  - jimmyjohns0075.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0076
+  web_twxdomain:
+  - jimmyjohns0076.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0077
+  web_twxdomain:
+  - jimmyjohns0077.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0078
+  web_twxdomain:
+  - jimmyjohns0078.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0079
+  web_twxdomain:
+  - jimmyjohns0079.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0080
+  web_twxdomain:
+  - jimmyjohns0080.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0081
+  web_twxdomain:
+  - jimmyjohns0081.ct-teamworx.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: PAPAMURPHYS_APP
+  db_username: FR_0011
+  web_twxdomain:
+  - papamurphyspizzapride.ct-teamworx.com

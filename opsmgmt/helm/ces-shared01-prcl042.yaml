@@ -1,0 +1,672 @@
+$ cat ces-shared01-prcl042.yaml
+gateway:
+  name: opsmgmt-gateway-05
+  namespace: envoy-gateway-system-05
+
+siteinfo:
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: RGS_APP
+  db_username: web_user
+  web_emdomain:
+  - rgs-em.net-chef.com
+  web_ncdomain:
+  - rgs.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: PAPAMURPHYS_APP
+  db_username: WEB_USER
+  web_emdomain:
+  - papamurphys-em.net-chef.com
+  web_ncdomain:
+  - papamurphys.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: APPLEGREEN_APP
+  db_username: WEB_USER
+  web_emdomain:
+  - applegreen-em.net-chef.com
+  web_ncdomain:
+  - applegreen.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: MRGCT_APP
+  db_username: WEB_USER
+  web_emdomain:
+  - mrgct-em.net-chef.com
+  web_ncdomain:
+  - mrgct.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: FLOUR_APP
+  db_username: WEB_USER
+  web_emdomain:
+  - flour-em.net-chef.com
+  web_ncdomain:
+  - flour.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: WEB_USER
+  web_emdomain:
+  - jimmyjohns-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0002
+  web_emdomain:
+  - jsfort-em.net-chef.com
+  web_ncdomain:
+  - jsfort.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0003
+  web_emdomain:
+  - bushwood-em.net-chef.com
+  web_ncdomain:
+  - bushwood.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0010
+  web_emdomain:
+  - ghfg-em.net-chef.com
+  web_ncdomain:
+  - ghfg.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0014
+  web_emdomain:
+  - jimmyjohns0014-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0014.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0016
+  web_emdomain:
+  - jimmyjohns0016-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0016.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0017
+  web_emdomain:
+  - jimmyjohns0017-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0017.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0019
+  web_emdomain:
+  - jimmyjohns0019-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0019.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0020
+  web_emdomain:
+  - jimmyjohns0020-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0020.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0021
+  web_emdomain:
+  - jimmyjohns0021-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0021.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0022
+  web_emdomain:
+  - jimmyjohns0022-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0022.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0023
+  web_emdomain:
+  - jimmyjohns0023-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0023.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0024
+  web_emdomain:
+  - jimmyjohns0024-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0024.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0025
+  web_emdomain:
+  - jimmyjohns0025-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0025.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0026
+  web_emdomain:
+  - jimmyjohns0026-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0026.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0027
+  web_emdomain:
+  - jimmyjohns0027-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0027.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0028
+  web_emdomain:
+  - jimmyjohns0028-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0028.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0029
+  web_emdomain:
+  - jimmyjohns0029-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0029.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0030
+  web_emdomain:
+  - jimmyjohns0030-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0030.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0031
+  web_emdomain:
+  - jimmyjohns0031-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0031.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0032
+  web_emdomain:
+  - jimmyjohns0032-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0032.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0033
+  web_emdomain:
+  - jimmyjohns0033-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0033.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0034
+  web_emdomain:
+  - jimmyjohns0034-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0034.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0035
+  web_emdomain:
+  - jimmyjohns0035-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0035.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0036
+  web_emdomain:
+  - jimmyjohns0036-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0036.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0037
+  web_emdomain:
+  - jimmyjohns0037-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0037.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0038
+  web_emdomain:
+  - jimmyjohns0038-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0038.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0039
+  web_emdomain:
+  - jimmyjohns0039-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0039.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0040
+  web_emdomain:
+  - jimmyjohns0040-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0040.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0041
+  web_emdomain:
+  - jimmyjohns0041-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0041.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0042
+  web_emdomain:
+  - jimmyjohns0042-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0042.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0043
+  web_emdomain:
+  - jimmyjohns0043-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0043.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0044
+  web_emdomain:
+  - jimmyjohns0044-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0044.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0045
+  web_emdomain:
+  - jimmyjohns0045-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0045.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0046
+  web_emdomain:
+  - jimmyjohns0046-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0046.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0047
+  web_emdomain:
+  - jimmyjohns0047-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0047.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0048
+  web_emdomain:
+  - jimmyjohns0048-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0048.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0049
+  web_emdomain:
+  - jimmyjohns0049-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0049.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0050
+  web_emdomain:
+  - jimmyjohns0050-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0050.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0051
+  web_emdomain:
+  - jimmyjohns0051-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0051.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0052
+  web_emdomain:
+  - jimmyjohns0052-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0052.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0053
+  web_emdomain:
+  - jimmyjohns0053-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0053.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0054
+  web_emdomain:
+  - jimmyjohns0054-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0054.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0055
+  web_emdomain:
+  - jimmyjohns0055-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0055.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0056
+  web_emdomain:
+  - jimmyjohns0056-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0056.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0057
+  web_emdomain:
+  - jimmyjohns0057-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0057.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: '1521'
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0058
+  web_emdomain:
+  - jimmyjohns0058-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0058.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0059
+  web_emdomain:
+  - jimmyjohns0059-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0059.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0060
+  web_emdomain:
+  - jimmyjohns0060-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0060.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0061
+  web_emdomain:
+  - jimmyjohns0061-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0061.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0062
+  web_emdomain:
+  - jimmyjohns0062-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0062.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0063
+  web_emdomain:
+  - jimmyjohns0063-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0063.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0064
+  web_emdomain:
+  - jimmyjohns0064-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0064.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0065
+  web_emdomain:
+  - jimmyjohns0065-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0065.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0066
+  web_emdomain:
+  - jimmyjohns0066-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0066.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0067
+  web_emdomain:
+  - jimmyjohns0067-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0067.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0068
+  web_emdomain:
+  - jimmyjohns0068-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0068.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0069
+  web_emdomain:
+  - jimmyjohns0069-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0069.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0070
+  web_emdomain:
+  - jimmyjohns0070-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0070.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0071
+  web_emdomain:
+  - jimmyjohns0071-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0071.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0072
+  web_emdomain:
+  - jimmyjohns0072-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0072.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0073
+  web_emdomain:
+  - jimmyjohns0073-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0073.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0074
+  web_emdomain:
+  - jimmyjohns0074-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0074.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0075
+  web_emdomain:
+  - jimmyjohns0075-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0075.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0076
+  web_emdomain:
+  - jimmyjohns0076-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0076.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0077
+  web_emdomain:
+  - jimmyjohns0077-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0077.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0078
+  web_emdomain:
+  - jimmyjohns0078-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0078.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: JIMMYJOHNS_APP
+  db_username: FR_0079
+  web_emdomain:
+  - jimmyjohns0079-em.net-chef.com
+  web_ncdomain:
+  - jimmyjohns0079.net-chef.com
+- db_password_vault_key: PROD_STANDARD
+  db_port: 1521
+  db_server: prcl042.prod.crunchtime.it
+  db_servicename: PAPAMURPHYS_APP
+  db_username: FR_0011
+  web_emdomain:
+  - papamurphyspizzapride-em.net-chef.com
+  web_ncdomain:
+  - papamurphyspizzapride.net-chef.com
