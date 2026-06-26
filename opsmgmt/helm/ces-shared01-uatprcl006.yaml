@@ -1,0 +1,318 @@
+gateway:
+  name: opsmgmt-gateway-01
+  namespace: envoy-gateway-system-01
+siteinfo:
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: DBITEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - dbi-test-em.net-chef.com
+    web_ncdomain:
+      - dbi-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: DBITEST_APP
+    db_username: FR_1079
+    web_emdomain:
+      - dbi1079-test-em.net-chef.com
+    web_ncdomain:
+      - dbi1079-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: DBITEST_APP
+    db_username: FR_1190
+    web_emdomain:
+      - dbi1190-test-em.net-chef.com
+    web_ncdomain:
+      - dbi1190-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: DBITEST_APP
+    db_username: FR_1480
+    web_emdomain:
+      - dbi1480-test-em.net-chef.com
+    web_ncdomain:
+      - dbi1480-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: DBITEST_APP
+    db_username: FR_2110
+    web_emdomain:
+      - dbi2110-test-em.net-chef.com
+    web_ncdomain:
+      - dbi2110-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: DBITEST_APP
+    db_username: FR_2151
+    web_emdomain:
+      - dbi2151-test-em.net-chef.com
+    web_ncdomain:
+      - dbi2151-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: DOMETEST_APP
+    db_username: web_user
+    web_emdomain:
+      - dome-test-em.net-chef.com
+    web_ncdomain:
+      - dome-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: GRILLDTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - grilld-test-em.net-chef.com
+    web_ncdomain:
+      - grilld-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: GYGTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - gyg-test-em.net-chef.com
+    web_ncdomain:
+      - gyg-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: NLRGTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - nlrg-test-em.net-chef.com
+    web_ncdomain:
+      - nlrg-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: PTTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - pt-test-em.net-chef.com
+    web_ncdomain:
+      - pt-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: SWEETGREENTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - sweetgreen-test-em.net-chef.com
+    web_ncdomain:
+      - sweetgreen-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: MAXBYHOSPITALITYTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - maxbyhospitality-test-em.net-chef.com
+    web_ncdomain:
+      - maxbyhospitality-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: XPERIENCERGTEST_APP
+    db_username: web_user
+    web_emdomain:
+      - xperiencerg-test-em.net-chef.com
+    web_ncdomain:
+      - xperiencerg-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: SEAGRASSBHGTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - seagrassbhg-test-em.net-chef.com
+    web_ncdomain:
+      - seagrassbhg-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: PHILZCOFFEETEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - philzcoffee-test-em.net-chef.com
+    web_ncdomain:
+      - philzcoffee-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: EARLSTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - earls-test-em.net-chef.com
+    web_ncdomain:
+      - earls-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: SHAKESHACKTEST_APP
+    db_username: web_user
+    web_emdomain:
+      - shakeshack-test-em.net-chef.com
+    web_ncdomain:
+      - shakeshack-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: MACGRILLTEST_APP
+    db_username: web_user
+    web_emdomain:
+      - macgrill-test-em.net-chef.com
+    web_ncdomain:
+      - macgrill-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: BURGERVILLETEST_APP
+    db_username: web_user
+    web_emdomain:
+      - burgerville-test-em.net-chef.com
+    web_ncdomain:
+      - burgerville-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: STARBUCKSCERT_APP
+    db_username: web_user
+    web_emdomain:
+      - starbucks-cert-em.net-chef.com
+    web_ncdomain:
+      - starbucks-cert.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: FATBRANDSTEST_APP
+    db_username: web_user
+    web_emdomain:
+      - fatbrands-test-em.net-chef.com
+    web_ncdomain:
+      - fatbrands-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: COOPERSHAWKTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - coopershawk-test-em.net-chef.com
+    web_ncdomain:
+      - coopershawk-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: FCHENTERPRISESTEST_APP
+    db_username: web_user
+    web_emdomain:
+      - fchenterprises-test-em.net-chef.com
+    web_ncdomain:
+      - fchenterprises-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: CNGTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - cng-test-em.net-chef.com
+    web_ncdomain:
+      - cng-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: LUCASPOSTEST_APP
+    db_username: web_user
+    web_emdomain:
+      - lucaspos-test-em.net-chef.com
+    web_ncdomain:
+      - lucaspos-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: HFECORPTEST_APP
+    db_username: web_user
+    web_emdomain:
+      - hfecorp-test-em.net-chef.com
+    web_ncdomain:
+      - hfecorp-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: JOEYRESTAURANTSTEST_APP
+    db_username: web_user
+    web_emdomain:
+      - joeyrestaurants-test-em.net-chef.com
+    web_ncdomain:
+      - joeyrestaurants-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: CASUALRESTAURANTSTEST_APP
+    db_username: web_user
+    web_emdomain:
+      - casualrestaurants-test-em.net-chef.com
+    web_ncdomain:
+      - casualrestaurants-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: JCKTEST_APP
+    db_username: web_user
+    web_emdomain:
+      - jck-test-em.net-chef.com
+    web_ncdomain:
+      - jck-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: IUCTEST_APP
+    db_username: web_user
+    web_emdomain:
+      - iuc-test-em.net-chef.com
+    web_ncdomain:
+      - iuc-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: BOUDINTEST_APP
+    db_username: web_user
+    web_emdomain:
+      - boudin-test-em.net-chef.com
+    web_ncdomain:
+      - boudin-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: BLACKANGUSTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - blackangus-test-em.net-chef.com
+    web_ncdomain:
+      - blackangus-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: NRGTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - nrg-test-em.net-chef.com
+    web_ncdomain:
+      - nrg-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: TROPICALSMOOTHIECAFETEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - tropicalsmoothiecafetest-em.net-chef.com
+    web_ncdomain:
+      - tropicalsmoothiecafetest.net-chef.com

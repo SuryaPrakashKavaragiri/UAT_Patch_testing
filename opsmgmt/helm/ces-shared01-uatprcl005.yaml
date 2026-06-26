@@ -1,0 +1,678 @@
+gateway:
+  name: opsmgmt-gateway-01
+  namespace: envoy-gateway-system-01
+siteinfo:
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: AMERICANATEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - americana-test-em.net-chef.com
+    web_ncdomain:
+      - americana-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: ALFACOTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - alfaco-test-em.net-chef.com
+    web_ncdomain:
+      - alfaco-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CULVERSTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - culvers-test-em.net-chef.com
+    web_ncdomain:
+      - culvers-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CULVERSTEST_APP
+    db_username: fr_0013
+    web_emdomain:
+      - culvers0013-test-em.net-chef.com
+    web_ncdomain:
+      - culvers0013-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CULVERSTEST_APP
+    db_username: fr_0014
+    web_emdomain:
+      - culvers0014-test-em.net-chef.com
+    web_ncdomain:
+      - culvers0014-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CULVERSTEST_APP
+    db_username: fr_0015
+    web_emdomain:
+      - culvers0015-test-em.net-chef.com
+    web_ncdomain:
+      - culvers0015-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CULVERSTEST_APP
+    db_username: FR_0030
+    web_emdomain:
+      - culvers0030-test-em.net-chef.com
+    web_ncdomain:
+      - culvers0030-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: PLAYTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - play-test-em.net-chef.com
+    web_ncdomain:
+      - play-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: prkmctest_APP
+    db_username: fr_fa
+    web_emdomain:
+      - prkmc-fa-test-em.net-chef.com
+    web_ncdomain:
+      - prkmc-fa-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: prkmctest_APP
+    db_username: FR_JDKMGT
+    web_emdomain:
+      - prkmc-jdkmgt-test-em.net-chef.com
+    web_ncdomain:
+      - prkmc-jdkmgt-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: prkmctest_APP
+    db_username: FR_ONEIL
+    web_emdomain:
+      - prkmc-oneil-test-em.net-chef.com
+    web_ncdomain:
+      - prkmc-oneil-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: prkmctest_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - prkmc-test-em.net-chef.com
+    web_ncdomain:
+      - prkmc-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: prkmctest_APP
+    db_username: fr_cyhawk
+    web_emdomain:
+      - prkmccyhawk-test-em.net-chef.com
+    web_ncdomain:
+      - prkmccyhawk-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: prkmctest_APP
+    db_username: fr_esmond
+    web_emdomain:
+      - prkmcesmond-test-em.net-chef.com
+    web_ncdomain:
+      - prkmcesmond-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: prkmctest_APP
+    db_username: fr_0091
+    web_emdomain:
+      - prkmchuddlehouse-test-em.net-chef.com
+    web_ncdomain:
+      - prkmchuddlehouse-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: prkmctest_APP
+    db_username: fr_mollet
+    web_emdomain:
+      - prkmcmollet-test-em.net-chef.com
+    web_ncdomain:
+      - prkmcmollet-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: prkmctest_APP
+    db_username: fr_rbt
+    web_emdomain:
+      - prkmcrbt-test-em.net-chef.com
+    web_ncdomain:
+      - prkmcrbt-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: prkmctest_APP
+    db_username: fr_wharton
+    web_emdomain:
+      - prkmcwharton-test-em.net-chef.com
+    web_ncdomain:
+      - prkmcwharton-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: YADAVTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - yadav-test-em.net-chef.com
+    web_ncdomain:
+      - yadav-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: FR_FR128
+    web_emdomain:
+      - fiveguysfr128-test-em.net-chef.com
+    web_ncdomain:
+      - fiveguysfr128-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: fr_HYDEPV
+    web_emdomain:
+      - fiveguyshydepv-test-em.net-chef.com
+    web_ncdomain:
+      - fiveguyshydepv-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: fr_AB
+    web_emdomain:
+      - fiveguysab-test-em.net-chef.com
+    web_ncdomain:
+      - fiveguysab-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: fr_KRNBLZ
+    web_emdomain:
+      - fiveguyskrnblz-test-em.net-chef.com
+    web_ncdomain:
+      - fiveguyskrnblz-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: fr_rise
+    web_emdomain:
+      - fiveguysrise-test-em.net-chef.com
+    web_ncdomain:
+      - fiveguysrise-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: fr_s5
+    web_emdomain:
+      - fiveguyss5-test-em.net-chef.com
+    web_ncdomain:
+      - fiveguyss5-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: FR_HHLLC
+    web_emdomain:
+      - fiveguyshhllc-test-em.net-chef.com
+    web_ncdomain:
+      - fiveguyshhllc-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: web_user
+    web_emdomain:
+      - fiveguys-test-em.net-chef.com
+    web_ncdomain:
+      - fiveguys-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: fr_fgo
+    web_emdomain:
+      - fiveguys-fgo-test-em.net-chef.com
+    web_ncdomain:
+      - fiveguys-fgo-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: fr_bac
+    web_emdomain:
+      - fiveguysbac-test-em.net-chef.com
+    web_ncdomain:
+      - fiveguysbac-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: fr_ee
+    web_emdomain:
+      - fiveguysee-test-em.net-chef.com
+    web_ncdomain:
+      - fiveguysee-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: fr_fr116
+    web_emdomain:
+      - fiveguysfr116-test-em.net-chef.com
+    web_ncdomain:
+      - fiveguysfr116-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: fr_fr136
+    web_emdomain:
+      - fiveguysfr136-test-em.net-chef.com
+    web_ncdomain:
+      - fiveguysfr136-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: ICCOLTDTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - iccoltd-test-em.net-chef.com
+    web_ncdomain:
+      - iccoltd-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: PUTTSHACKTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - puttshack-test-em.net-chef.com
+    web_ncdomain:
+      - puttshack-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: JNNTEST_APP
+    db_username: web_user
+    web_emdomain:
+      - jnn-test-em.net-chef.com
+    web_ncdomain:
+      - jnn-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: TFKTEST_APP
+    db_username: web_user
+    web_emdomain:
+      - tfk-test-em.net-chef.com
+    web_ncdomain:
+      - tfk-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: MSBCTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - msbc-test-em.net-chef.com
+    web_ncdomain:
+      - msbc-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: MIMISTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - mimis-test-em.net-chef.com
+    web_ncdomain:
+      - mimis-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CINEMARKTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - cinemark-test-em.net-chef.com
+    web_ncdomain:
+      - cinemark-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: SLIMCHICKENSTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - slimchickens-test-em.net-chef.com
+    web_ncdomain:
+      - slimchickens-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: SLIMCHICKENSTEST_APP
+    db_username: fr_0008
+    web_emdomain:
+      - slimchickens0008-test-em.net-chef.com
+    web_ncdomain:
+      - slimchickens0008-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: SLIMCHICKENSTEST_APP
+    db_username: FR_0010
+    web_emdomain:
+      - slimchickens0010-test-em.net-chef.com
+    web_ncdomain:
+      - slimchickens0010-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: SLIMCHICKENSTEST_APP
+    db_username: fr_0016
+    web_emdomain:
+      - slimchickens0016-test-em.net-chef.com
+    web_ncdomain:
+      - slimchickens0016-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FRCTEST_APP
+    db_username: web_user
+    web_emdomain:
+      - frc-test-em.net-chef.com
+    web_ncdomain:
+      - frc-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: JUICELANDTEST_APP
+    db_username: web_user
+    web_emdomain:
+      - juiceland-test-em.net-chef.com
+    web_ncdomain:
+      - juiceland-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIESTATEST_APP
+    db_username: web_user
+    web_emdomain:
+      - fiesta-test-em.net-chef.com
+    web_ncdomain:
+      - fiesta-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: ttutest_app
+    db_username: web_user
+    web_emdomain:
+      - ttu-test-em.net-chef.com
+    web_ncdomain:
+      - ttu-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: JALEXANDERSHOLDINGSTEST_APP
+    db_username: web_user
+    web_emdomain:
+      - jalexandersholdings-test-em.net-chef.com
+    web_ncdomain:
+      - jalexandersholdings-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: PFCHANGSTEST_APP
+    db_username: web_user
+    web_emdomain:
+      - pfchangs-test-em.net-chef.com
+    web_ncdomain:
+      - pfchangs-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: TOPGOLFTEST_APP
+    db_username: web_user
+    web_emdomain:
+      - topgolf-test-em.net-chef.com
+    web_ncdomain:
+      - topgolf-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: GOODWILLSEWTEST_APP
+    db_username: web_user
+    web_emdomain:
+      - goodwillsew-test-em.net-chef.com
+    web_ncdomain:
+      - goodwillsew-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: ONROUTETEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - onroute-test-em.net-chef.com
+    web_ncdomain:
+      - onroute-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: LEDUFFTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - leduff-test-em.net-chef.com
+    web_ncdomain:
+      - leduff-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: NEWKSTEST_APP
+    db_username: web_user
+    web_emdomain:
+      - newks-test-em.net-chef.com
+    web_ncdomain:
+      - newks-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: DRAFTHOUSETEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - drafthouse-test-em.net-chef.com
+    web_ncdomain:
+      - drafthouse-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: AMCTEST2_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - amc-test2-em.net-chef.com
+    web_ncdomain:
+      - amc-test2.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: LIFETIMETEST_APP
+    db_username: web_user
+    web_emdomain:
+      - lifetime-test-em.net-chef.com
+    web_ncdomain:
+      - lifetime-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: LFRTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - lfr-test-em.net-chef.com
+    web_ncdomain:
+      - lfr-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: JIMMYJOHNSTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - jimmyjohns-test-em.net-chef.com
+    web_ncdomain:
+      - jimmyjohns-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: JIMMYJOHNSTEST_APP
+    db_username: FR_0024
+    web_emdomain:
+      - jimmyjohns0024-test-em.net-chef.com
+    web_ncdomain:
+      - jimmyjohns0024-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: JIMMYJOHNSTEST_APP
+    db_username: FR_0010
+    web_emdomain:
+      - ghfg-test-em.net-chef.com
+    web_ncdomain:
+      - ghfg-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: MENDOTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - mendo-test-em.net-chef.com
+    web_ncdomain:
+      - mendo-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: JIMMYJOHNSTEST_APP
+    db_username: FR_0054
+    web_emdomain:
+      - jimmyjohns0054-test-em.net-chef.com
+    web_ncdomain:
+      - jimmyjohns0054-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: POTBELLYTEST_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - potbelly-test-em.net-chef.com
+    web_ncdomain:
+      - potbelly-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: POTBELLYTEST_APP
+    db_username: FR_0002
+    web_emdomain:
+      - potbelly0002-test-em.net-chef.com
+    web_ncdomain:
+      - potbelly0002-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: POTBELLYTEST_APP
+    db_username: FR_0004
+    web_emdomain:
+      - potbelly0004-test-em.net-chef.com
+    web_ncdomain:
+      - potbelly0004-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CARIBOUTEST_APP
+    db_username: web_user
+    web_emdomain:
+      - caribou-test-em.net-chef.com
+    web_ncdomain:
+      - caribou-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CARIBOUTEST_APP
+    db_username: FR_002
+    web_emdomain:
+      - caribou002-test-em.net-chef.com
+    web_ncdomain:
+      - caribou002-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CARIBOUTEST_APP
+    db_username: FR_003
+    web_emdomain:
+      - caribou003-test-em.net-chef.com
+    web_ncdomain:
+      - caribou003-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CARIBOUTEST_APP
+    db_username: FR_004
+    web_emdomain:
+      - caribou004-test-em.net-chef.com
+    web_ncdomain:
+      - caribou004-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CARIBOUTEST_APP
+    db_username: FR_005
+    web_emdomain:
+      - caribou005-test-em.net-chef.com
+    web_ncdomain:
+      - caribou005-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CARIBOUTEST_APP
+    db_username: FR_006
+    web_emdomain:
+      - caribou006-test-em.net-chef.com
+    web_ncdomain:
+      - caribou006-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CARIBOUTEST_APP
+    db_username: FR_007
+    web_emdomain:
+      - caribou007-test-em.net-chef.com
+    web_ncdomain:
+      - caribou007-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CARIBOUTEST_APP
+    db_username: FR_008
+    web_emdomain:
+      - caribou008-test-em.net-chef.com
+    web_ncdomain:
+      - caribou008-test.net-chef.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: PANDATEST2_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - panda-test2-em.net-chef.com
+    web_ncdomain:
+      - panda-test2.net-chef.com

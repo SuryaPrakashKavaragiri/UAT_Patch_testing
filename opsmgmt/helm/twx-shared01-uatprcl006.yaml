@@ -1,0 +1,165 @@
+gateway:
+  name: opsmgmt-gateway-01
+  namespace: envoy-gateway-system-01
+siteinfo:
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: DBITEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - dbi-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: DBITEST_APP
+    db_username: FR_1079
+    web_twxdomain:
+      - dbi1079-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: DBITEST_APP
+    db_username: FR_1190
+    web_twxdomain:
+      - dbi1190-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: DBITEST_APP
+    db_username: FR_1480
+    web_twxdomain:
+      - dbi1480-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: DBITEST_APP
+    db_username: FR_2110
+    web_twxdomain:
+      - dbi2110-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: DBITEST_APP
+    db_username: FR_2151
+    web_twxdomain:
+      - dbi2151-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: DOMETEST_APP
+    db_username: web_user
+    web_twxdomain:
+      - dome-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: NLRGTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - nlrg-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: SWEETGREENTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - sweetgreen-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: MAXBYHOSPITALITYTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - maxbyhospitality-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: PHILZCOFFEETEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - philzcoffee-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: BURGERVILLETEST_APP
+    db_username: web_user
+    web_twxdomain:
+      - burgerville-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: FATBRANDSTEST_APP
+    db_username: web_user
+    web_twxdomain:
+      - fatbrands-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: FCHENTERPRISESTEST_APP
+    db_username: web_user
+    web_twxdomain:
+      - fchenterprises-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: LUCASPOSTEST_APP
+    db_username: web_user
+    web_twxdomain:
+      - lucaspos-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: JOEYRESTAURANTSTEST_APP
+    db_username: web_user
+    web_twxdomain:
+      - joeyrestaurants-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: BOUDINTEST_APP
+    db_username: web_user
+    web_twxdomain:
+      - boudin-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: BLACKANGUSTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - blackangus-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: JCKTEST_APP
+    db_username: web_user
+    web_twxdomain:
+      - jck-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: MACGRILLTEST_APP
+    db_username: web_user
+    web_twxdomain:
+      - macgrill-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: SHAKESHACKTEST_APP
+    db_username: web_user
+    web_twxdomain:
+      - shakeshack-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: NRGTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - nrg-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl006.prod.crunchtime.it
+    db_servicename: TROPICALSMOOTHIECAFETEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - tropicalsmoothiecafetest.ct-teamworx.com

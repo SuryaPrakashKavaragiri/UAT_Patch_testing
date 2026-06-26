@@ -1,0 +1,214 @@
+gateway:
+  name: opsmgmt-gateway-02
+  namespace: envoy-gateway-system-02
+siteinfo:
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: BGOODTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - bgood-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: BGOODTEST_APP
+    db_username: fr_f1
+    web_twxdomain:
+      - bgoodf1-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: BRIADTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - briad-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: CKETEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - cke-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: CKETEST_APP
+    db_username: FR_0001
+    web_twxdomain:
+      - cke0001-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: CKETEST_APP
+    db_username: fr_0049
+    web_twxdomain:
+      - cke0049-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: CKETEST_APP
+    db_username: fr_0050
+    web_twxdomain:
+      - cke0050-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: CKETEST_APP
+    db_username: fr_0052
+    web_twxdomain:
+      - cke0052-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: CKETEST_APP
+    db_username: FR_0115
+    web_twxdomain:
+      - cke0115-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: CPCTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - cpc-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: FRANWKSTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - franworks-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: JMIKETEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - jerseymikes-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: lowlandstest_app
+    db_username: WEB_USER
+    web_twxdomain:
+      - lowlands-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: RGSTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - rgs-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: TACODELITEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - tacodeli-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: WENDYSTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - wendys-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: FOODTASTICTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - foodtastic-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: FRISCHSTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - frischs-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: TASTYBURGERTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - tastyburger-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: WHITBREADTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - whitbread-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: CITYBREWCOFFEETEST_APP
+    db_username: web_user
+    web_twxdomain:
+      - citybrewcoffee-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: FIVESTARTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - fivestar-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: MARGARITASTEST_APP
+    db_username: web_user
+    web_twxdomain:
+      - margaritas-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: APPLEGREENTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - applegreen-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: CAVATEST_APP
+    db_username: web_user
+    web_twxdomain:
+      - cava-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: FHSTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - fhs-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: GCITYTEST_APP
+    db_username: web_user
+    web_twxdomain:
+      - gcity-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: GCITYTEST_APP
+    db_username: fr_0022
+    web_twxdomain:
+      - famousedavesbismarck-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: CITYBBQTEST_APP
+    db_username: web_user
+    web_twxdomain:
+      - citybbq-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl007.prod.crunchtime.it
+    db_servicename: RECIPEUNLIMITEDTEST_APP
+    db_username: web_user
+    web_twxdomain:
+      - recipeunlimited-test.ct-teamworx.com

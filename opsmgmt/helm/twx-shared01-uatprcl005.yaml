@@ -1,0 +1,424 @@
+gateway:
+  name: opsmgmt-gateway-02
+  namespace: envoy-gateway-system-02
+siteinfo:
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: AMERICANATEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - americana-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CULVERSTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - culvers-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CULVERSTEST_APP
+    db_username: fr_0013
+    web_twxdomain:
+      - culvers0013-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CULVERSTEST_APP
+    db_username: fr_0014
+    web_twxdomain:
+      - culvers0014-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CULVERSTEST_APP
+    db_username: fr_0015
+    web_twxdomain:
+      - culvers0015-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CULVERSTEST_APP
+    db_username: FR_0030
+    web_twxdomain:
+      - culvers0030-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: prkmctest_APP
+    db_username: fr_fa
+    web_twxdomain:
+      - prkmc-fa-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: prkmctest_APP
+    db_username: FR_JDKMGT
+    web_twxdomain:
+      - prkmc-jdkmgt-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: prkmctest_APP
+    db_username: FR_ONEIL
+    web_twxdomain:
+      - prkmc-oneil-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: prkmctest_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - prkmc-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: prkmctest_APP
+    db_username: fr_cyhawk
+    web_twxdomain:
+      - prkmccyhawk-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: prkmctest_APP
+    db_username: fr_esmond
+    web_twxdomain:
+      - prkmcesmond-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: prkmctest_APP
+    db_username: fr_0091
+    web_twxdomain:
+      - prkmchuddlehouse-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: prkmctest_APP
+    db_username: fr_mollet
+    web_twxdomain:
+      - prkmcmollet-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: prkmctest_APP
+    db_username: fr_rbt
+    web_twxdomain:
+      - prkmcrbt-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: prkmctest_APP
+    db_username: fr_wharton
+    web_twxdomain:
+      - prkmcwharton-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: FR_FR128
+    web_twxdomain:
+      - fiveguysfr128-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: fr_HYDEPV
+    web_twxdomain:
+      - fiveguyshydepv-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: fr_AB
+    web_twxdomain:
+      - fiveguysab-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: fr_KRNBLZ
+    web_twxdomain:
+      - fiveguyskrnblz-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: fr_rise
+    web_twxdomain:
+      - fiveguysrise-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: fr_s5
+    web_twxdomain:
+      - fiveguyss5-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: FR_HHLLC
+    web_twxdomain:
+      - fiveguyshhllc-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: web_user
+    web_twxdomain:
+      - fiveguys-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: fr_fgo
+    web_twxdomain:
+      - fiveguys-fgo-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: fr_bac
+    web_twxdomain:
+      - fiveguysbac-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: fr_ee
+    web_twxdomain:
+      - fiveguysee-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: fr_fr116
+    web_twxdomain:
+      - fiveguysfr116-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIVEGUYSTEST_APP
+    db_username: fr_fr136
+    web_twxdomain:
+      - fiveguysfr136-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: PUTTSHACKTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - puttshack-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: JNNTEST_APP
+    db_username: web_user
+    web_twxdomain:
+      - jnn-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: TFKTEST_APP
+    db_username: web_user
+    web_twxdomain:
+      - tfk-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: MSBCTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - msbc-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: MIMISTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - mimis-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FRCTEST_APP
+    db_username: web_user
+    web_twxdomain:
+      - frc-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: JUICELANDTEST_APP
+    db_username: web_user
+    web_twxdomain:
+      - juiceland-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: JALEXANDERSHOLDINGSTEST_APP
+    db_username: web_user
+    web_twxdomain:
+      - jalexandersholdings-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: ONROUTETEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - onroute-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: LEDUFFTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - leduff-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: AMCTEST2_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - amc-test2.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: FIESTATEST_APP
+    db_username: web_user
+    web_twxdomain:
+      - fiesta-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: LIFETIMETEST_APP
+    db_username: web_user
+    web_twxdomain:
+      - lifetime-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: SLIMCHICKENSTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - slimchickens-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: SLIMCHICKENSTEST_APP
+    db_username: fr_0008
+    web_twxdomain:
+      - slimchickens0008-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: SLIMCHICKENSTEST_APP
+    db_username: fr_0016
+    web_twxdomain:
+      - slimchickens0016-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: JIMMYJOHNSTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - jimmyjohns-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: JIMMYJOHNSTEST_APP
+    db_username: FR_0024
+    web_twxdomain:
+      - jimmyjohns0024-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: JIMMYJOHNSTEST_APP
+    db_username: FR_0010
+    web_twxdomain:
+      - ghfg-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: JIMMYJOHNSTEST_APP
+    db_username: FR_0054
+    web_twxdomain:
+      - jimmyjohns0054-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: POTBELLYTEST_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - potbelly-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: POTBELLYTEST_APP
+    db_username: FR_0002
+    web_twxdomain:
+      - potbelly0002-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: POTBELLYTEST_APP
+    db_username: FR_0004
+    web_twxdomain:
+      - potbelly0004-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CARIBOUTEST_APP
+    db_username: web_user
+    web_twxdomain:
+      - caribou-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CARIBOUTEST_APP
+    db_username: FR_002
+    web_twxdomain:
+      - caribou002-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CARIBOUTEST_APP
+    db_username: FR_003
+    web_twxdomain:
+      - caribou003-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CARIBOUTEST_APP
+    db_username: FR_004
+    web_twxdomain:
+      - caribou004-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CARIBOUTEST_APP
+    db_username: FR_005
+    web_twxdomain:
+      - caribou005-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CARIBOUTEST_APP
+    db_username: FR_006
+    web_twxdomain:
+      - caribou006-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CARIBOUTEST_APP
+    db_username: FR_007
+    web_twxdomain:
+      - caribou007-test.ct-teamworx.com
+  - db_password_vault_key: UAT_STANDARD
+    db_port: '1521'
+    db_server: uatprcl005.prod.crunchtime.it
+    db_servicename: CARIBOUTEST_APP
+    db_username: FR_008
+    web_twxdomain:
+      - caribou008-test.ct-teamworx.com
