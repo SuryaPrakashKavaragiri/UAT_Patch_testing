@@ -197,6 +197,9 @@ git config user.email "skavaragiri@crunchtime.com"
 git checkout -B "$BASE_BRANCH" "origin/$BASE_BRANCH"
 echo "Current branch after checkout:"
 git branch --show-current
+
+git checkout -b "$NEW_BRANCH"
+
 cd opsmgmt/helm || exit 1
 
 shopt -s nullglob
