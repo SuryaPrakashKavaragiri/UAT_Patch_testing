@@ -193,6 +193,8 @@ gh auth status
 git config user.name "skavaragiri"
 git config user.email "skavaragiri@crunchtime.com"
 
+git remote set-url origin https://$GITHUB_TOKEN@github.com/$REPO_OWNER/$REPO_NAME.git
+
 
 git checkout -B "$BASE_BRANCH" "origin/$BASE_BRANCH"
 echo "Current branch after checkout:"
