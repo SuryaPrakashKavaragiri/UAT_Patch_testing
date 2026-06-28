@@ -152,22 +152,22 @@ elif [[ "$TYPE" == "Site down" ]]; then
     case "$ENVIRONMENT" in
     prod)
     BASE_BRANCH="prod-k8s-c02"
-    NEW_BRANCH="Removing ${SITE_NAME%,} sites"
+    NEW_BRANCH="Removing-${SITE_NAME%,}-sites"
     ;;
     uat)
     BASE_BRANCH="uat-oke-c01"
-    NEW_BRANCH="Removing ${SITE_NAME%,} sites"
+    NEW_BRANCH="Removing-${SITE_NAME%,}-sites"
     ;;
     esac
 elif [[ "$TYPE" == "Disable site" ]]; then
     case "$ENVIRONMENT" in
     prod)
     BASE_BRANCH="prod-k8s-c02"
-    NEW_BRANCH="Disabling ${SITE_NAME%,} sites"
+    NEW_BRANCH="Disabling-${SITE_NAME%,}-sites"
     ;;
     uat)
     BASE_BRANCH="uat-oke-c01"
-    NEW_BRANCH="Disabling ${SITE_NAME%,} sites"
+    NEW_BRANCH="Disabling-${SITE_NAME%,}-sites"
     ;;
     esac
 elif [[ "$TYPE" == "Enable site" ]]; then
