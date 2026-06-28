@@ -212,7 +212,7 @@ fi
 
 if [[ "$SERVICE" == "twx" ]]; then
 for file in "${twx_files_list[@]}"; do
-remove_twx_siteinfo "$file" "$EM_WEB_DOMAIN" "$NC_WEB_DOMAIN"
+remove_twx_siteinfo "$file" "$TWX_WEB_DOMAIN"
 done
 fi
 done
