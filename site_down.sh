@@ -47,7 +47,7 @@ remove_ces_siteinfo() {
     local em_domain="${2%,}"
     local nc_domain="${3%,}"
 
-    yq -i --arg em "$em_domain" --arg nc "$nc_domain" '
+    yq e -i --arg em "$em_domain" --arg nc "$nc_domain" '
       .siteinfo |= map(
         select(
           (.web_emdomain | index($em) | not)
@@ -62,7 +62,7 @@ remove_twx_siteinfo() {
     local file="$1"
     local twx_domain="${2%,}"
 
-    yq -i --arg twx "$twx_domain" '
+    yq e -i --arg twx "$twx_domain" '
       .siteinfo |= map(
         select(
           (.web_twxdomain | index($twx) | not)
