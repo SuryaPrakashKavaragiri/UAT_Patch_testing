@@ -51,9 +51,9 @@ remove_ces_siteinfo() {
     yq e -i '
       .siteinfo |= map(
         select(
-          (.web_emdomain | index($em) | not)
+          (.web_emdomain | index("'"$em_domain"'") | not)
           and
-          (.web_ncdomain | index($nc) | not)
+          (.web_ncdomain | index("'"$nc_domain"'") | not)
         )
       )
     ' "$file"
@@ -66,7 +66,7 @@ remove_twx_siteinfo() {
     yq e -i '
       .siteinfo |= map(
         select(
-          (.web_twxdomain | index($twx) | not)
+          (.web_twxdomain | index("'"$twx_domain"'") | not)
         )
       )
     ' "$file"
