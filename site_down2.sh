@@ -247,12 +247,12 @@ for SERVICE in "${SERVICES[@]}"; do
         found=false
         for file in "${twx_files_list[@]}"; do
           echo "Searching $file"
-          if TARGET="$twx" yq e '
-          any(
-            .siteinfo[];
-              (.web_twxdomain[] == strenv(TARGET))
+          if TWX_VAL="$twx" yq e '
+          .siteinfo[];
+          | select(
+              (.web_twxdomain[] == strenv(TWX_VAL))
           )
-          ' "$file" | grep -q true; then
+          ' "$file" | grep -q .; then
             echo "Found in $file"
             remove_twx_siteinfo "$file" "$twx"
             found=true
