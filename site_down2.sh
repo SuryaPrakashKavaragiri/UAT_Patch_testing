@@ -224,12 +224,12 @@ for SERVICE in "${SERVICES[@]}"; do
         echo "EM=$em | NC=$nc"
         for file in "${ces_files_list[@]}"; do
           echo "Searching $file"
-          if yq e '
+          if [[ "$(yq e ' 
             any(.siteinfo[];
               (.web_emdomain | contains(["'"$em"'"])) and
               (.web_ncdomain | contains(["'"$nc"'"]))
             )
-          ' "$file" | grep -q true; then
+          ' "$file")" == true ]]; then
             echo "Found in $file"
             remove_ces_siteinfo "$file" "$em" "$nc"
             break
