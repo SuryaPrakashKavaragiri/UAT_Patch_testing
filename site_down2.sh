@@ -224,12 +224,12 @@ for SERVICE in "${SERVICES[@]}"; do
         echo "EM=$em | NC=$nc"
         for file in "${ces_files_list[@]}"; do
           echo "Searching $file"
-          if yq e '
+          if yq e "
             any(.siteinfo[];
-              (.web_emdomain | index("'"$em"'")) and
-              (.web_ncdomain | index("'"$nc"'"))
+              (.web_emdomain[] == \"$em\") and
+              (.web_ncdomain[] == \"$nc\")
             )
-          ' "$file" | grep -q true; then
+          " "$file" | grep -q true; then
             echo "Found in $file"
             remove_ces_siteinfo "$file" "$em" "$nc"
             break
@@ -245,11 +245,11 @@ for SERVICE in "${SERVICES[@]}"; do
         found=false
         for file in "${twx_files_list[@]}"; do
           echo "Searching $file"
-          if yq e '
+          if yq e "
             any(.siteinfo[];
-             (.web_twxdomain | index("'"$twx"'")))
+             (.web_twxdomain[] == \"$twx\")
             )
-          ' "$file" | grep -q true; then
+          " "$file" | grep -q true; then
             echo "Found in $file"
             remove_twx_siteinfo "$file" "$twx"
             found=true
