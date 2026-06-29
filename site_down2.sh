@@ -224,7 +224,14 @@ for SERVICE in "${SERVICES[@]}"; do
         echo "EM=$em | NC=$nc"
         for file in "${ces_files_list[@]}"; do
           echo "Searching $file"
-          if EM_VAL="$em" NC_VAL="$nc" yq e "any(.siteinfo[]; (.web_emdomain[] == strenv(EM_VAL)) and (.web_ncdomain[] == strenv(NC_VAL)))" "$file" | grep -q true; then
+          if EM_VAL="$em" NC_VAL="$nc" yq e '
+          .siteinfo
+          | any(
+              (.web_emdomain[] == strenv(EM_VAL))
+              and
+              (.web_ncdomain[] == strenv(NC_VAL))
+          )
+          ' "$file" | grep -q true; then
             echo "Found in $file"
             remove_ces_siteinfo "$file" "$em" "$nc"
             break
@@ -233,22 +240,22 @@ for SERVICE in "${SERVICES[@]}"; do
       done
     fi
 
-    if [[ "$SERVICE" == "twx" ]]; then
-      for twx in "${TWX_WEB_DOMAIN[@]}"; do
-        [[ -z "$twx" ]] && continue
-        echo "TWX=$twx"
-        found=false
-        for file in "${twx_files_list[@]}"; do
-          echo "Searching $file"
-          if TARGET="$twx" yq e "any(.siteinfo[]; .web_twxdomain[] == strenv(TARGET))" "$file" | grep -q true; then
-            echo "Found in $file"
-            remove_twx_siteinfo "$file" "$twx"
-            found=true
-            break
-          fi
-        done
-      done
-    fi
+    # if [[ "$SERVICE" == "twx" ]]; then
+    #   for twx in "${TWX_WEB_DOMAIN[@]}"; do
+    #     [[ -z "$twx" ]] && continue
+    #     echo "TWX=$twx"
+    #     found=false
+    #     for file in "${twx_files_list[@]}"; do
+    #       echo "Searching $file"
+    #       if TARGET="$twx" yq e "any(.siteinfo[]; .web_twxdomain.[] == strenv(TARGET))" "$file" | grep -q true; then
+    #         echo "Found in $file"
+    #         remove_twx_siteinfo "$file" "$twx"
+    #         found=true
+    #         break
+    #       fi
+    #     done
+    #   done
+    # fi
 done
 
 git diff
