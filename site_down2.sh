@@ -226,8 +226,8 @@ for SERVICE in "${SERVICES[@]}"; do
           echo "Searching $file"
           if yq e '
             any(.siteinfo[];
-              (.web_emdomain[] == "'"$em"'") and
-              (.web_ncdomain[] == "'"$nc"'")
+              (.web_emdomain | index("'"$em"'")) and
+              (.web_ncdomain | index("'"$nc"'"))
             )
           ' "$file" | grep -q true; then
             echo "Found in $file"
@@ -247,7 +247,7 @@ for SERVICE in "${SERVICES[@]}"; do
           echo "Searching $file"
           if yq e '
             any(.siteinfo[];
-              (.web_twxdomain[] == "'"$twx"'")
+             (.web_twxdomain | index("'"$twx"'")))
             )
           ' "$file" | grep -q true; then
             echo "Found in $file"
