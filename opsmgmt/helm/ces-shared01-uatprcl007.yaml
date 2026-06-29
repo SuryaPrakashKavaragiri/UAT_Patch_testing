@@ -122,15 +122,6 @@ siteinfo:
   - db_password_vault_key: UAT_STANDARD
     db_port: '1521'
     db_server: uatprcl007.prod.crunchtime.it
-    db_servicename: RGSTEST_APP
-    db_username: WEB_USER
-    web_emdomain:
-      - rgs-test-em.net-chef.com
-    web_ncdomain:
-      - rgs-test.net-chef.com
-  - db_password_vault_key: UAT_STANDARD
-    db_port: '1521'
-    db_server: uatprcl007.prod.crunchtime.it
     db_servicename: TACODELITEST_APP
     db_username: WEB_USER
     web_emdomain:

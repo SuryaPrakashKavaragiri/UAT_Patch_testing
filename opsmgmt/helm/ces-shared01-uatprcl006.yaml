@@ -86,15 +86,6 @@ siteinfo:
   - db_password_vault_key: UAT_STANDARD
     db_port: '1521'
     db_server: uatprcl006.prod.crunchtime.it
-    db_servicename: NLRGTEST_APP
-    db_username: WEB_USER
-    web_emdomain:
-      - nlrg-test-em.net-chef.com
-    web_ncdomain:
-      - nlrg-test.net-chef.com
-  - db_password_vault_key: UAT_STANDARD
-    db_port: '1521'
-    db_server: uatprcl006.prod.crunchtime.it
     db_servicename: PTTEST_APP
     db_username: WEB_USER
     web_emdomain:

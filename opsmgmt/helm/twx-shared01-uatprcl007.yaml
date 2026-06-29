@@ -96,13 +96,6 @@ siteinfo:
   - db_password_vault_key: UAT_STANDARD
     db_port: '1521'
     db_server: uatprcl007.prod.crunchtime.it
-    db_servicename: RGSTEST_APP
-    db_username: WEB_USER
-    web_twxdomain:
-      - rgs-test.ct-teamworx.com
-  - db_password_vault_key: UAT_STANDARD
-    db_port: '1521'
-    db_server: uatprcl007.prod.crunchtime.it
     db_servicename: TACODELITEST_APP
     db_username: WEB_USER
     web_twxdomain:

@@ -572,15 +572,6 @@ siteinfo:
     db_port: '1521'
     db_server: uatprcl005.prod.crunchtime.it
     db_servicename: POTBELLYTEST_APP
-    db_username: WEB_USER
-    web_emdomain:
-      - potbelly-test-em.net-chef.com
-    web_ncdomain:
-      - potbelly-test.net-chef.com
-  - db_password_vault_key: UAT_STANDARD
-    db_port: '1521'
-    db_server: uatprcl005.prod.crunchtime.it
-    db_servicename: POTBELLYTEST_APP
     db_username: FR_0002
     web_emdomain:
       - potbelly0002-test-em.net-chef.com

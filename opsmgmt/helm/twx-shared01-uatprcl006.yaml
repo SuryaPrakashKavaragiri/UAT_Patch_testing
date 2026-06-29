@@ -54,13 +54,6 @@ siteinfo:
   - db_password_vault_key: UAT_STANDARD
     db_port: '1521'
     db_server: uatprcl006.prod.crunchtime.it
-    db_servicename: NLRGTEST_APP
-    db_username: WEB_USER
-    web_twxdomain:
-      - nlrg-test.ct-teamworx.com
-  - db_password_vault_key: UAT_STANDARD
-    db_port: '1521'
-    db_server: uatprcl006.prod.crunchtime.it
     db_servicename: SWEETGREENTEST_APP
     db_username: WEB_USER
     web_twxdomain:
