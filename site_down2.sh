@@ -255,7 +255,6 @@ for SERVICE in "${SERVICES[@]}"; do
         [[ "$found" == "true" ]] && continue
       done
     fi
-  done
 done
 
 git diff
