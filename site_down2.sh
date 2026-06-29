@@ -214,7 +214,7 @@ cd opsmgmt/helm || exit 1
 shopt -s nullglob
 ces_files_list=(ces*)
 twx_files_list=(twx*)
-
+yq --version
 for SERVICE in "${SERVICES[@]}"; do
 
     if [[ "$SERVICE" == "ces" ]]; then
@@ -226,12 +226,12 @@ for SERVICE in "${SERVICES[@]}"; do
           echo "Searching $file"
           if EM_VAL="$em" NC_VAL="$nc" yq e '
           .siteinfo
-          | any(
+          | select(
               (.web_emdomain[] == strenv(EM_VAL))
               and
               (.web_ncdomain[] == strenv(NC_VAL))
           )
-          ' "$file" | grep -q true; then
+          ' "$file" | grep -q .; then
             echo "Found in $file"
             remove_ces_siteinfo "$file" "$em" "$nc"
             break
