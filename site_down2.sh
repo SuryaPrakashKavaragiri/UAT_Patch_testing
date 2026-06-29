@@ -189,6 +189,10 @@ elif [[ "$TYPE" == "Enable site" ]]; then
 
     fi
 
+
+    
+git clean -fdx
+git reset --hard
 export GITHUB_TOKEN="$GITHUB_PR_TOKEN"
 #echo "$GITHUB_PR_TOKEN" | gh auth login --with-token
 gh auth status
