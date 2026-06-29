@@ -225,7 +225,7 @@ for SERVICE in "${SERVICES[@]}"; do
         for file in "${ces_files_list[@]}"; do
           echo "Searching $file"
           if EM_VAL="$em" NC_VAL="$nc" yq e '
-          .siteinfo
+          .siteinfo[]
           | select(
               (.web_emdomain[] == strenv(EM_VAL))
               and
