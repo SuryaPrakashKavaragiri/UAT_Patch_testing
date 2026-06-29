@@ -240,22 +240,27 @@ for SERVICE in "${SERVICES[@]}"; do
       done
     fi
 
-    # if [[ "$SERVICE" == "twx" ]]; then
-    #   for twx in "${TWX_WEB_DOMAIN[@]}"; do
-    #     [[ -z "$twx" ]] && continue
-    #     echo "TWX=$twx"
-    #     found=false
-    #     for file in "${twx_files_list[@]}"; do
-    #       echo "Searching $file"
-    #       if TARGET="$twx" yq e "any(.siteinfo[]; .web_twxdomain.[] == strenv(TARGET))" "$file" | grep -q true; then
-    #         echo "Found in $file"
-    #         remove_twx_siteinfo "$file" "$twx"
-    #         found=true
-    #         break
-    #       fi
-    #     done
-    #   done
-    # fi
+    if [[ "$SERVICE" == "twx" ]]; then
+      for twx in "${TWX_WEB_DOMAIN[@]}"; do
+        [[ -z "$twx" ]] && continue
+        echo "TWX=$twx"
+        found=false
+        for file in "${twx_files_list[@]}"; do
+          echo "Searching $file"
+          if TARGET="$twx" yq e '
+          any(
+            .siteinfo[];
+              (.web_twxdomain[] == strenv(TARGET))
+          )
+          ' "$file" | grep -q true; then
+            echo "Found in $file"
+            remove_twx_siteinfo "$file" "$twx"
+            found=true
+            break
+          fi
+        done
+      done
+    fi
 done
 
 git diff
@@ -276,8 +281,7 @@ gh pr create \
   --title "$NEW_BRANCH" \
   --body "$REFERENCE_TICKET" \
   --base "$BASE_BRANCH" \
-  --head "$NEW_BRANCH" \
-  --delete-branch
+  --head "$NEW_BRANCH"
 
 #create_pr "$NEW_BRANCH" "$BASE_BRANCH" "$COMMIT_MSG"
 
