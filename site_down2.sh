@@ -207,6 +207,8 @@ git checkout -B "$BASE_BRANCH" "origin/$BASE_BRANCH"
 echo "Current branch after checkout:"
 git branch --show-current
 
+git push origin --delete "$NEW_BRANCH" 2>/dev/null || true
+
 git checkout -B "$NEW_BRANCH"
 
 cd opsmgmt/helm || exit 1
@@ -248,7 +250,7 @@ for SERVICE in "${SERVICES[@]}"; do
         for file in "${twx_files_list[@]}"; do
           echo "Searching $file"
           if TWX_VAL="$twx" yq e '
-          .siteinfo[];
+          .siteinfo[]
           | select(
               (.web_twxdomain[] == strenv(TWX_VAL))
           )
