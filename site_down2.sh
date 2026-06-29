@@ -226,8 +226,8 @@ for SERVICE in "${SERVICES[@]}"; do
           echo "Searching $file"
           if [[ "$(yq e ' 
             any(.siteinfo[];
-              (.web_emdomain | contains(["'"$em"'"])) and
-              (.web_ncdomain | contains(["'"$nc"'"]))
+              (.web_emdomain | contains("'"$em"'")) and
+              (.web_ncdomain | contains("'"$nc"'"))
             )
           ' "$file")" == true ]]; then
             echo "Found in $file"
