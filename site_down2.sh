@@ -190,7 +190,7 @@ elif [[ "$TYPE" == "Enable site" ]]; then
     fi
 
 
-    
+
 git clean -fdx
 git reset --hard
 export GITHUB_TOKEN="$GITHUB_PR_TOKEN"
@@ -224,12 +224,12 @@ for SERVICE in "${SERVICES[@]}"; do
         echo "EM=$em | NC=$nc"
         for file in "${ces_files_list[@]}"; do
           echo "Searching $file"
-          if [[ $(yq e '
+          if yq e '
             any(.siteinfo[];
               (.web_emdomain | contains(["'"$em"'"])) and
               (.web_ncdomain | contains(["'"$nc"'"]))
             )
-          ' "$file") == "true" ]]; then
+          ' "$file" | grep -q true; then
             echo "Found in $file"
             remove_ces_siteinfo "$file" "$em" "$nc"
             break
@@ -245,11 +245,11 @@ for SERVICE in "${SERVICES[@]}"; do
         found=false
         for file in "${twx_files_list[@]}"; do
           echo "Searching $file"
-          if [[ $(yq e '
+          if yq e '
             any(.siteinfo[];
               (.web_twxdomain | contains(["'"$twx"'"]))
             )
-          ' "$file") == "true" ]]; then
+          ' "$file" | grep -q true; then
             echo "Found in $file"
             remove_twx_siteinfo "$file" "$twx"
             found=true
