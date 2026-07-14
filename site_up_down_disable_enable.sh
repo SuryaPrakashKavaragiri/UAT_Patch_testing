@@ -276,7 +276,12 @@ for SERVICE in "${SERVICES[@]}"; do
     # fi
 
     if [[ "$SERVICE" == "ces" ]]; then
-        printf '%s\n' "$SITE_BRING_UP_DATA" |
+        #printf '%s\n' "$SITE_BRING_UP_DATA" |
+        echo "===== RAW DATA ====="
+        printf '%s\n' "$SITE_BRING_UP_DATA" | cat -A
+        echo "===================="
+        CLEAN_DATA=$(printf '%s' "$SITE_BRING_UP_DATA" | sed 's/\xC2\xA0/ /g')
+        printf '%s\n' "$CLEAN_DATA" |
         yq -o=json '.[] | select(has("web_emdomain"))' |
         while IFS= read -r entry; do
 
@@ -453,7 +458,7 @@ for SERVICE in "${SERVICES[@]}"; do
       done
     fi
   ;;
-esac
+  esac
 done
 
 git diff
