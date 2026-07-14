@@ -453,6 +453,7 @@ for SERVICE in "${SERVICES[@]}"; do
       done
     fi
   ;;
+esac
 done
 
 git diff
