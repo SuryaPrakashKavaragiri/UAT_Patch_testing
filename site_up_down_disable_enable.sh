@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -ex
 
 # shellScript.sh
 # Surya Prakash <skavaragirir@crunchtime.com>
