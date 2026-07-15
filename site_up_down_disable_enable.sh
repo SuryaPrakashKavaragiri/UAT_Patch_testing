@@ -13,13 +13,31 @@ set -e
 : "${CES_TWX:?CES_TWX not provided}"
 : "${SITE_NAME:?SITE_NAME not provided}"
 : "${GITHUB_PR_TOKEN:?GITHUB_PR_TOKEN not provided}"
-if [[ "$TYPE" == "Site up" ]]; then
-    : "${CES_DEPLOYMENT_NAME:?CES_DEPLOYMENT_NAME not provided}"
+
+
+# if [[ "$TYPE" == "Site up" && "$CES_TWX" == "ces" ]]; then
+#     : "${CES_DEPLOYMENT_NAME:?CES_DEPLOYMENT_NAME not provided}"
+# fi
+
+# if [[ "$TYPE" == "Site up" && "$CES_TWX" == "twx" ]]; then
+#     : "${TWX_DEPLOYMENT_NAME:?TWX_DEPLOYMENT_NAME not provided}"
+# fi
+
+
+if [[ "$TYPE" == "Site up" && "$CES_TWX" == "ces" ]]; then
+    if [[ -z "${CES_DEPLOYMENT_NAME%,}" ]]; then
+      echo "CES_DEPLOYMENT_NAME not provided"
+      exit 1
+    fi
 fi
 
-if [[ "$TYPE" == "Site up" ]]; then
-    : "${TWX_DEPLOYMENT_NAME:?TWX_DEPLOYMENT_NAME not provided}"
+if [[ "$TYPE" == "Site up" && "$CES_TWX" == "twx" ]]; then
+    if [[ -z "${TWX_DEPLOYMENT_NAME%,}" ]]; then
+      echo "TWX_DEPLOYMENT_NAME not provided"
+      exit 1
+    fi
 fi
+
 
 #REFERENCE_TICKET use this to add description in MR
 #: "${REFERENCE_TICKET:?REFERENCE_TICKET not provided}"
