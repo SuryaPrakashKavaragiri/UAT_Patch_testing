@@ -238,9 +238,9 @@ cd opsmgmt/helm || exit 1
 shopt -s nullglob
 
 if [[ -n "$CES_DEPLOYMENT_NAME" ]]; then
-    ces_files_list=("$CES_DEPLOYMENT_NAME")
+    ces_file_name=("$CES_DEPLOYMENT_NAME")
 else
-    ces_files_list=(ces*)
+    ces_file_name=(ces*)
 fi
 
 if [[ -n "$TWX_DEPLOYMENT_NAME" ]]; then
@@ -276,28 +276,36 @@ for SERVICE in "${SERVICES[@]}"; do
     # fi
 
     if [[ "$SERVICE" == "ces" ]]; then
-        #printf '%s\n' "$SITE_BRING_UP_DATA" |
-        echo "===== RAW DATA ====="
-        printf '%s\n' "$SITE_BRING_UP_DATA" | cat -A
-        echo "===================="
-        CLEAN_DATA=$(printf '%s' "$SITE_BRING_UP_DATA" | sed 's/\xC2\xA0/ /g')
-        printf '%s\n' "$CLEAN_DATA" |
-        yq -o=json -I=0 '.[] | select(has("web_emdomain"))' |
-        while IFS= read -r entry; do
+      #printf '%s\n' "$SITE_BRING_UP_DATA" |
+      echo "===== RAW DATA ====="
+      printf '%s\n' "$SITE_BRING_UP_DATA" | cat -A
+      echo "===================="
+      CLEAN_DATA=$(printf '%s' "$SITE_BRING_UP_DATA" | sed 's/\xC2\xA0/ /g')
+      printf '%s\n' "$CLEAN_DATA" |
+      yq -o=json -I=0 '.[] | select(has("web_emdomain"))' |
+      while IFS= read -r entry; do
 
-            CES_DATA=$(printf '%s\n' "$entry" | yq -P)
+        CES_DATA=$(printf '%s\n' "$entry" | yq -P)
 
-            EM_DOMAIN=$(printf '%s\n' "$CES_DATA" | yq -r '.web_emdomain')
-            NC_DOMAIN=$(printf '%s\n' "$CES_DATA" | yq -r '.web_ncdomain')
+        EM_DOMAIN=$(printf '%s\n' "$CES_DATA" | yq -r '.web_emdomain')
+        NC_DOMAIN=$(printf '%s\n' "$CES_DATA" | yq -r '.web_ncdomain')
 
-            if yq -e \
-                ".[] | select(.web_emdomain == \"$EM_DOMAIN\" and .web_ncdomain == \"$NC_DOMAIN\")" \
-                "$ces_file_name" >/dev/null 2>&1; then
-                echo "Entry for web_emdomain=$EM_DOMAIN and web_ncdomain=$NC_DOMAIN already exists. Skipping."
-            else
-                add_siteinfo "$ces_file_name" "$CES_DATA"
-            fi
+        for file in "${ces_file_name[@]}"; do
+
+          if yq -e \
+              ".[] | select(.web_emdomain[0] == \"$EM_DOMAIN\" and .web_ncdomain[0] == \"$NC_DOMAIN\")" \
+              "$file" >/dev/null 2>&1; then
+
+              echo "Entry for web_emdomain=$EM_DOMAIN and web_ncdomain=$NC_DOMAIN already exists in $file. Skipping."
+
+          else
+
+              add_siteinfo "$file" "$CES_DATA"
+
+          fi
+
         done
+      done
     fi
 
     if [[ "$SERVICE" == "twx" ]]; then
