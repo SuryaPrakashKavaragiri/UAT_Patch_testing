@@ -164,6 +164,10 @@ add_siteinfo() {
 
     printf '%s\n' "$data" > "$tmpfile"
 
+    # Convert Git Bash path to Windows path
+    local tmpfile_win
+    tmpfile_win=$(cygpath -w "$tmpfile")
+
     yq -i ".siteinfo += [load(\"$tmpfile\")]" "$file"
 
     rm -f "$tmpfile"
@@ -265,7 +269,12 @@ else
     twx_files_list=(twx*)
 fi
 
+# Debugging
 yq --version
+which yq
+cygpath -w "$(mktemp)"
+
+
 for SERVICE in "${SERVICES[@]}"; do
   case "$TYPE" in 
   "Site up")
