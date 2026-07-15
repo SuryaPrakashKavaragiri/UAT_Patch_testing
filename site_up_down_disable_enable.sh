@@ -282,7 +282,7 @@ for SERVICE in "${SERVICES[@]}"; do
         echo "===================="
         CLEAN_DATA=$(printf '%s' "$SITE_BRING_UP_DATA" | sed 's/\xC2\xA0/ /g')
         printf '%s\n' "$CLEAN_DATA" |
-        yq -o=json '.[] | select(has("web_emdomain"))' |
+        yq -o=json -I=0 '.[] | select(has("web_emdomain"))' |
         while IFS= read -r entry; do
 
             CES_DATA=$(printf '%s\n' "$entry" | yq -P)
