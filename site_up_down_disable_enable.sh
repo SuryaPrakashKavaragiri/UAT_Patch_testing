@@ -13,11 +13,11 @@ set -e
 : "${CES_TWX:?CES_TWX not provided}"
 : "${SITE_NAME:?SITE_NAME not provided}"
 : "${GITHUB_PR_TOKEN:?GITHUB_PR_TOKEN not provided}"
-if [[ "$TYPE" == "site up" ]]; then
+if [[ "$TYPE" == "Site up" ]]; then
     : "${CES_DEPLOYMENT_NAME:?CES_DEPLOYMENT_NAME not provided}"
 fi
 
-if [[ "$TYPE" == "site up" ]]; then
+if [[ "$TYPE" == "Site up" ]]; then
     : "${TWX_DEPLOYMENT_NAME:?TWX_DEPLOYMENT_NAME not provided}"
 fi
 
