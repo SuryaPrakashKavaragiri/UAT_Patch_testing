@@ -24,14 +24,14 @@ set -e
 # fi
 
 
-if [[ "$TYPE" == "Site up" && "$CES_TWX" == "ces" ]]; then
+if [[ "$TYPE" == "Site up" && "$CES_TWX" == *"ces"* ]]; then
     if [[ -z "${CES_DEPLOYMENT_NAME%,}" ]]; then
       echo "CES_DEPLOYMENT_NAME not provided"
       exit 1
     fi
 fi
 
-if [[ "$TYPE" == "Site up" && "$CES_TWX" == "twx" ]]; then
+if [[ "$TYPE" == "Site up" && "$CES_TWX" == *"twx"* ]]; then
     if [[ -z "${TWX_DEPLOYMENT_NAME%,}" ]]; then
       echo "TWX_DEPLOYMENT_NAME not provided"
       exit 1
@@ -348,7 +348,7 @@ for SERVICE in "${SERVICES[@]}"; do
         for file in "${ces_file_name[@]}"; do
 
           if yq -e \
-              ".[] | select(.web_emdomain[0] == \"$EM_DOMAIN\" and .web_ncdomain[0] == \"$NC_DOMAIN\")" \
+              ".siteinfo[] | select(.web_emdomain[0] == \"$EM_DOMAIN\" and .web_ncdomain[0] == \"$NC_DOMAIN\")" \
               "$file" >/dev/null 2>&1; then
 
               echo "Entry for web_emdomain=$EM_DOMAIN and web_ncdomain=$NC_DOMAIN already exists in $file. Skipping."
@@ -373,7 +373,7 @@ for SERVICE in "${SERVICES[@]}"; do
             DOMAIN=$(printf '%s\n' "$TWX_DATA" | yq -r '.web_twxdomain[0]')
 
             if yq -e \
-                ".[] | select(.web_twxdomain == \"$DOMAIN\")" \
+                ".siteinfo[] | select(.web_twxdomain == \"$DOMAIN\")" \
                 "$twx_file_name" >/dev/null 2>&1; then
                 echo "Entry for web_twxdomain=$DOMAIN already exists. Skipping."
             else
