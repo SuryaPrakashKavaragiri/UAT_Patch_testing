@@ -147,12 +147,28 @@ enable_twx_siteinfo() {
     ' "$file"
 }
 
-add_siteinfo() {
-    local file="$1"
-    local data="$2"
+# add_siteinfo() {
+#     local file="$1"
+#     local data="$2"
 
-    yq -i '.siteinfo += [load("/dev/stdin")]' "$file" <<< "$data"
+#     yq -i '.siteinfo += [load("/dev/stdin")]' "$file" <<< "$data"
+# }
+
+
+add_siteinfo() {
+    local file=$1
+    local data=$2
+
+    local tmpfile
+    tmpfile=$(mktemp)
+
+    printf '%s\n' "$data" > "$tmpfile"
+
+    yq -i ".siteinfo += [load(\"$tmpfile\")]" "$file"
+
+    rm -f "$tmpfile"
 }
+
 
 # Determine versions
 #########################################
@@ -287,8 +303,8 @@ for SERVICE in "${SERVICES[@]}"; do
 
         CES_DATA=$(printf '%s\n' "$entry" | yq -P)
 
-        EM_DOMAIN=$(printf '%s\n' "$CES_DATA" | yq -r '.web_emdomain')
-        NC_DOMAIN=$(printf '%s\n' "$CES_DATA" | yq -r '.web_ncdomain')
+        EM_DOMAIN=$(printf '%s\n' "$CES_DATA" | yq -r '.web_emdomain[0]')
+        NC_DOMAIN=$(printf '%s\n' "$CES_DATA" | yq -r '.web_ncdomain[0]')
 
         for file in "${ces_file_name[@]}"; do
 
@@ -315,7 +331,7 @@ for SERVICE in "${SERVICES[@]}"; do
 
             TWX_DATA=$(printf '%s\n' "$entry" | yq -P)
 
-            DOMAIN=$(printf '%s\n' "$TWX_DATA" | yq -r '.web_twxdomain')
+            DOMAIN=$(printf '%s\n' "$TWX_DATA" | yq -r '.web_twxdomain[0]')
 
             if yq -e \
                 ".[] | select(.web_twxdomain == \"$DOMAIN\")" \
