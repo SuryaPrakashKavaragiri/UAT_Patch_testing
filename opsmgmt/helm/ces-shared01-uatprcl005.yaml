@@ -676,3 +676,12 @@ siteinfo:
       - panda-test2-em.net-chef.com
     web_ncdomain:
       - panda-test2.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: "1521"
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - surya-em.net-chef.com
+    web_ncdomain:
+      - surya.net-chef.com
