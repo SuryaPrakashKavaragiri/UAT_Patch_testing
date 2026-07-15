@@ -178,9 +178,11 @@ add_siteinfo() {
     local file=$1
     local data=$2
 
-    SITEINFO_DATA="$data" yq -i \
-        '.siteinfo += [env(SITEINFO_DATA) | from_yaml]' \
-        "$file"
+    export SITEINFO_DATA="$data"
+
+    yq -i '.siteinfo += [strenv(SITEINFO_DATA) | from_yaml]' "$file"
+
+    unset SITEINFO_DATA
 }
 
 
