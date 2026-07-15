@@ -155,22 +155,32 @@ enable_twx_siteinfo() {
 # }
 
 
+# add_siteinfo() {
+#     local file=$1
+#     local data=$2
+
+#     local tmpfile
+#     tmpfile=$(mktemp)
+
+#     printf '%s\n' "$data" > "$tmpfile"
+
+#     # Convert Git Bash path to Windows path
+#     local tmpfile_win
+#     tmpfile_win=$(cygpath -w "$tmpfile")
+
+#     yq -i ".siteinfo += [load(\"$tmpfile_win\")]" "$file"
+
+#     rm -f "$tmpfile"
+# }
+
+
 add_siteinfo() {
     local file=$1
     local data=$2
 
-    local tmpfile
-    tmpfile=$(mktemp)
-
-    printf '%s\n' "$data" > "$tmpfile"
-
-    # Convert Git Bash path to Windows path
-    local tmpfile_win
-    tmpfile_win=$(cygpath -w "$tmpfile")
-
-    yq -i ".siteinfo += [load(\"$tmpfile\")]" "$file"
-
-    rm -f "$tmpfile"
+    SITEINFO_DATA="$data" yq -i \
+        '.siteinfo += [env(SITEINFO_DATA) | from_yaml]' \
+        "$file"
 }
 
 
