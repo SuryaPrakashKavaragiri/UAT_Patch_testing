@@ -345,21 +345,20 @@ for SERVICE in "${SERVICES[@]}"; do
         EM_DOMAIN=$(printf '%s\n' "$CES_DATA" | yq -r '.web_emdomain[0]')
         NC_DOMAIN=$(printf '%s\n' "$CES_DATA" | yq -r '.web_ncdomain[0]')
 
-        for file in "${ces_file_name[@]}"; do
+        file ="${ces_file_name[0]}"
 
           if yq -e \
               ".siteinfo[] | select(.web_emdomain[0] == \"$EM_DOMAIN\" and .web_ncdomain[0] == \"$NC_DOMAIN\")" \
               "$file" >/dev/null 2>&1; then
 
               echo "Entry for web_emdomain=$EM_DOMAIN and web_ncdomain=$NC_DOMAIN already exists in $file. Skipping."
+              exit 1
 
           else
 
               add_siteinfo "$file" "$CES_DATA"
 
           fi
-
-        done
       done
     fi
 
@@ -373,9 +372,10 @@ for SERVICE in "${SERVICES[@]}"; do
             DOMAIN=$(printf '%s\n' "$TWX_DATA" | yq -r '.web_twxdomain[0]')
 
             if yq -e \
-                ".siteinfo[] | select(.web_twxdomain == \"$DOMAIN\")" \
+                ".siteinfo[] | select(.web_twxdomain[0] == \"$DOMAIN\")" \
                 "$twx_file_name" >/dev/null 2>&1; then
                 echo "Entry for web_twxdomain=$DOMAIN already exists. Skipping."
+                exit 1
             else
                 add_siteinfo "$twx_file_name" "$TWX_DATA"
             fi
