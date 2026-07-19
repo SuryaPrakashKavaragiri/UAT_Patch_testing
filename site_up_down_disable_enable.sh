@@ -315,7 +315,7 @@ else
 fi
 # Validate CES deployment file
 if [[ "$TYPE" == "Site up" && "$CES_TWX" == *"ces"* ]]; then
-    if [[ ! -f "$ces_file_name[0]}" ]]; then
+    if [[ ! -f "${ces_file_name[0]}" ]]; then
         echo "Error: CES deployment file '$ces_file_name[0]}' does not exist."
         echo "Available CES deployment files:"
         ls -1 ces*
