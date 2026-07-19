@@ -12,7 +12,26 @@ set -e
 : "${ENVIRONMENT:?ENVIRONMENT Type not provided}"
 : "${CES_TWX:?CES_TWX not provided}"
 : "${SITE_NAME:?SITE_NAME not provided}"
+: "${SITE_BRING_UP_DATA:?SITE_BRING_UP_DATA not provided}"
 : "${GITHUB_PR_TOKEN:?GITHUB_PR_TOKEN not provided}"
+
+SITE_NAME="${SITE_NAME%,}"
+
+if [[ -z "${SITE_NAME%,}" ]]; then
+    echo "SITE_NAME not provided"
+    exit 1
+fi
+
+# if [[ -z "$SITE_BRING_UP_DATA" ]]; then
+#     echo "SITE_BRING_UP_DATA not provided"
+#     exit 1
+# fi
+
+if [[ -z "${SITE_BRING_UP_DATA//[[:space:]]/}" ]]; then
+    echo "SITE_BRING_UP_DATA not provided"
+    exit 1
+fi
+
 
 
 # if [[ "$TYPE" == "Site up" && "$CES_TWX" == "ces" ]]; then
@@ -287,10 +306,20 @@ cd opsmgmt/helm || exit 1
 
 shopt -s nullglob
 
+
 if [[ -n "$CES_DEPLOYMENT_NAME" ]]; then
     ces_file_name=("$CES_DEPLOYMENT_NAME")
 else
     ces_file_name=(ces*)
+fi
+# Validate CES deployment file
+if [[ "$TYPE" == "Site up" && "$CES_TWX" == *"ces"* ]]; then
+    if [[ ! -f "$ces_file_name[0]}" ]]; then
+        echo "Error: CES deployment file '$ces_file_name[0]}' does not exist."
+        echo "Available CES deployment files:"
+        ls -1 ces*
+        exit 1
+    fi
 fi
 
 if [[ -n "$TWX_DEPLOYMENT_NAME" ]]; then
@@ -298,6 +327,16 @@ if [[ -n "$TWX_DEPLOYMENT_NAME" ]]; then
 else
     twx_files_list=(twx*)
 fi
+# Validate TWX deployment file
+if [[ "$TYPE" == "Site up" && "$CES_TWX" == *"twx"* ]]; then
+    if [[ ! -f "${twx_files_list[0]}" ]]; then
+        echo "Error: TWX deployment file '${twx_files_list[0]}' does not exist."
+        echo "Available TWX deployment files:"
+        ls -1 twx*
+        exit 1
+    fi
+fi
+
 
 # Debugging
 yq --version
@@ -345,7 +384,7 @@ for SERVICE in "${SERVICES[@]}"; do
         EM_DOMAIN=$(printf '%s\n' "$CES_DATA" | yq -r '.web_emdomain[0]')
         NC_DOMAIN=$(printf '%s\n' "$CES_DATA" | yq -r '.web_ncdomain[0]')
 
-        file ="${ces_file_name[0]}"
+        file="${ces_file_name[0]}"
 
           if yq -e \
               ".siteinfo[] | select(.web_emdomain[0] == \"$EM_DOMAIN\" and .web_ncdomain[0] == \"$NC_DOMAIN\")" \
@@ -370,14 +409,14 @@ for SERVICE in "${SERVICES[@]}"; do
             TWX_DATA=$(printf '%s\n' "$entry" | yq -P)
 
             DOMAIN=$(printf '%s\n' "$TWX_DATA" | yq -r '.web_twxdomain[0]')
-
+            file="${twx_files_list[0]}"
             if yq -e \
                 ".siteinfo[] | select(.web_twxdomain[0] == \"$DOMAIN\")" \
-                "$twx_file_name" >/dev/null 2>&1; then
+                "$file" >/dev/null 2>&1; then
                 echo "Entry for web_twxdomain=$DOMAIN already exists. Skipping."
                 exit 1
             else
-                add_siteinfo "$twx_file_name" "$TWX_DATA"
+                add_siteinfo "$file" "$TWX_DATA"
             fi
         done
     fi
@@ -435,7 +474,7 @@ for SERVICE in "${SERVICES[@]}"; do
         em="${EM_WEB_DOMAIN[$idx]}"
         nc="${NC_WEB_DOMAIN[$idx]}"
         echo "EM=$em | NC=$nc"
-        for file in "${ces_files_list[@]}"; do
+        for file in "${ces_file_name[@]}"; do
           echo "Searching $file"
           if EM_VAL="$em" NC_VAL="$nc" yq e '
           .siteinfo[]
