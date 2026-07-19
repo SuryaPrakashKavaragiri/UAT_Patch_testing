@@ -11,26 +11,27 @@ set -e
 : "${TYPE:? TYPE not provided}"
 : "${ENVIRONMENT:?ENVIRONMENT Type not provided}"
 : "${CES_TWX:?CES_TWX not provided}"
-: "${SITE_NAME:?SITE_NAME not provided}"
-: "${SITE_BRING_UP_DATA:?SITE_BRING_UP_DATA not provided}"
-: "${GITHUB_PR_TOKEN:?GITHUB_PR_TOKEN not provided}"
 
 SITE_NAME="${SITE_NAME%,}"
-
 if [[ -z "${SITE_NAME%,}" ]]; then
     echo "SITE_NAME not provided"
     exit 1
 fi
+
+: "${SITE_BRING_UP_DATA:?SITE_BRING_UP_DATA not provided}"
+: "${GITHUB_PR_TOKEN:?GITHUB_PR_TOKEN not provided}"
+
+
 
 # if [[ -z "$SITE_BRING_UP_DATA" ]]; then
 #     echo "SITE_BRING_UP_DATA not provided"
 #     exit 1
 # fi
 
-if [[ -z "${SITE_BRING_UP_DATA//[[:space:]]/}" ]]; then
-    echo "SITE_BRING_UP_DATA not provided"
-    exit 1
-fi
+# if [[ -z "${SITE_BRING_UP_DATA//[[:space:]]/}" ]]; then
+#     echo "SITE_BRING_UP_DATA not provided"
+#     exit 1
+# fi
 
 
 
