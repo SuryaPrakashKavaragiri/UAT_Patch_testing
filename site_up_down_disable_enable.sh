@@ -441,32 +441,22 @@ yq --version
 which yq
 cygpath -w "$(mktemp)"
 
+echo "TYPE=$TYPE"
+echo "CES_TWX=$CES_TWX"
+echo "SERVICES=(${SERVICES[*]})"
+
+echo "EM_WEB_DOMAIN=(${EM_WEB_DOMAIN[*]})"
+echo "NC_WEB_DOMAIN=(${NC_WEB_DOMAIN[*]})"
+
+echo "ces_file_name=(${ces_file_name[*]})"
+
+pwd
+ls -1
+
 
 for SERVICE in "${SERVICES[@]}"; do
   case "$TYPE" in 
   "Site up")
-    # if [[ "$SERVICE" == "ces" ]]; then
-    #   CES_DATA=$(printf '%s\n' "$SITE_BRING_UP_DATA" | \
-    #     yq -o=yaml '.[] | select(has("web_emdomain"))')
-    #   DOMAIN=$(printf '%s\n' "$CES_DATA" | yq '.web_emdomain')
-    #   if yq -e ".[] | select(.web_emdomain == \"$DOMAIN\")" "$ces_file_name" >/dev/null 2>&1; then
-    #     echo "Entry for $DOMAIN already exists."
-    #   else
-    #     add_siteinfo "$ces_file_name" "$CES_DATA"
-    #   fi
-    # fi
-
-    # if [[ "$SERVICE" == "twx" ]]; then
-    #   TWX_DATA=$(printf '%s\n' "$SITE_BRING_UP_DATA" | \
-    #     yq -o=yaml '.[] | select(has("web_twxdomain"))')
-    #   DOMAIN=$(printf '%s\n' "$TWX_DATA" | yq '.web_twxdomain')
-    #   if yq -e ".[] | select(.web_twxdomain == \"$DOMAIN\")" "$twx_file_name" >/dev/null 2>&1; then
-    #     echo "Entry for $DOMAIN already exists."
-    #   else
-    #     add_siteinfo "$twx_file_name" "$TWX_DATA"
-    #   fi
-    # fi
-
     if [[ "$SERVICE" == "ces" ]]; then
       #printf '%s\n' "$SITE_BRING_UP_DATA" |
       echo "===== RAW DATA ====="
@@ -526,7 +516,7 @@ for SERVICE in "${SERVICES[@]}"; do
         em="${EM_WEB_DOMAIN[$idx]}"
         nc="${NC_WEB_DOMAIN[$idx]}"
         echo "EM=$em | NC=$nc"
-        for file in "${ces_files_list[@]}"; do
+        for file in "${ces_file_name[@]}"; do
           echo "Searching $file"
           if EM_VAL="$em" NC_VAL="$nc" yq e '
           .siteinfo[]
