@@ -18,7 +18,9 @@ if [[ -z "${SITE_NAME%,}" ]]; then
     exit 1
 fi
 
-: "${SITE_BRING_UP_DATA:?SITE_BRING_UP_DATA not provided}"
+if [[ "$TYPE" == "Site up" ]]; then
+  : "${SITE_BRING_UP_DATA:?SITE_BRING_UP_DATA not provided}"
+fi
 : "${GITHUB_PR_TOKEN:?GITHUB_PR_TOKEN not provided}"
 
 validate_site_bring_up_data() {
