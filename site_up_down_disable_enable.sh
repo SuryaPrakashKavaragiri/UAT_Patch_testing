@@ -21,7 +21,98 @@ fi
 : "${SITE_BRING_UP_DATA:?SITE_BRING_UP_DATA not provided}"
 : "${GITHUB_PR_TOKEN:?GITHUB_PR_TOKEN not provided}"
 
+validate_site_bring_up_data() {
 
+    echo "Validating SITE_BRING_UP_DATA format..."
+
+    CLEAN_DATA=$(printf '%s' "$SITE_BRING_UP_DATA" | sed 's/\xC2\xA0/ /g')
+
+    if ! printf '%s\n' "$CLEAN_DATA" | yq e '.' >/dev/null 2>&1; then
+        echo "Error: SITE_BRING_UP_DATA contains invalid YAML format."
+        exit 1
+    fi
+
+
+    ENTRY_COUNT=$(printf '%s\n' "$CLEAN_DATA" | yq e 'length' -)
+
+    if [[ "$ENTRY_COUNT" -eq 0 ]]; then
+        echo "Error: SITE_BRING_UP_DATA is empty."
+        exit 1
+    fi
+
+
+    for ((i=0; i<ENTRY_COUNT; i++)); do
+
+        echo "Validating entry $((i+1))..."
+
+        REQUIRED_FIELDS=(
+            "db_password_vault_key"
+            "db_port"
+            "db_server"
+            "db_servicename"
+            "db_username"
+        )
+
+
+        for field in "${REQUIRED_FIELDS[@]}"; do
+            EXISTS=$(printf '%s\n' "$CLEAN_DATA" | yq e ".[$i] | has(\"$field\")" -)
+
+            if [[ "$EXISTS" != "true" ]]; then
+                echo "Error: Entry $((i+1)) missing required field: $field"
+                exit 1
+            fi
+        done
+
+
+        HAS_EM=$(printf '%s\n' "$CLEAN_DATA" | yq e ".[$i] | has(\"web_emdomain\")" -)
+        HAS_NC=$(printf '%s\n' "$CLEAN_DATA" | yq e ".[$i] | has(\"web_ncdomain\")" -)
+        HAS_TWX=$(printf '%s\n' "$CLEAN_DATA" | yq e ".[$i] | has(\"web_twxdomain\")" -)
+
+
+        # CES entry
+        if [[ "$HAS_EM" == "true" && "$HAS_NC" == "true" && "$HAS_TWX" == "false" ]]; then
+
+            echo "Entry $((i+1)) detected as CES format."
+
+            if [[ "$CES_TWX" != *"ces"* ]]; then
+                echo "WARNING: CES data found but CES is not selected in CES_TWX."
+                echo "Skipping CES entry $((i+1))."
+            fi
+
+
+        # TWX entry
+        elif [[ "$HAS_TWX" == "true" && "$HAS_EM" == "false" && "$HAS_NC" == "false" ]]; then
+
+            echo "Entry $((i+1)) detected as TWX format."
+
+            if [[ "$CES_TWX" != *"twx"* ]]; then
+                echo "WARNING: TWX data found but TWX is not selected in CES_TWX."
+                echo "Skipping TWX entry $((i+1))."
+            fi
+
+
+        else
+            echo "Error: Entry $((i+1)) has invalid SITE_BRING_UP_DATA format."
+            echo
+            echo "Allowed formats:"
+            echo "CES:"
+            echo "  web_emdomain"
+            echo "  web_ncdomain"
+            echo
+            echo "TWX:"
+            echo "  web_twxdomain"
+            exit 1
+        fi
+
+    done
+
+    echo "SITE_BRING_UP_DATA validation successful."
+}
+
+
+if [[ "$TYPE" == "Site up" ]]; then
+  validate_site_bring_up_data
+fi
 
 # if [[ -z "$SITE_BRING_UP_DATA" ]]; then
 #     echo "SITE_BRING_UP_DATA not provided"
@@ -283,6 +374,7 @@ elif [[ "$TYPE" == "Enable site" ]]; then
 
 
 
+
 git clean -fdx
 git reset --hard
 export GITHUB_TOKEN="$GITHUB_PR_TOKEN"
@@ -294,10 +386,13 @@ git config user.email "skavaragiri@crunchtime.com"
 
 git remote set-url origin https://$GITHUB_TOKEN@github.com/$REPO_OWNER/$REPO_NAME.git
 
+git fetch origin
 
 git checkout -B "$BASE_BRANCH" "origin/$BASE_BRANCH"
 echo "Current branch after checkout:"
 git branch --show-current
+
+git branch -D "$NEW_BRANCH" 2>/dev/null || true
 
 git push origin --delete "$NEW_BRANCH" 2>/dev/null || true
 
