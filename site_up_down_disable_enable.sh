@@ -201,41 +201,39 @@ remove_twx_siteinfo() {
 
 disable_ces_siteinfo() {
     local file="$1"
-    local em="$2"
-    local nc="$3"
+    export EM_VAL="$2"
+    export NC_VAL="$3"
 
     yq e -i '
       .siteinfo |= map(
-        if (
-          (.web_emdomain | contains(["'"$em"'"]))
-          and
-          (.web_ncdomain | contains(["'"$nc"'"]))
-        )
-        then
-          . + {"disable": true}
-        else
-          .
+        if ((.web_emdomain | contains([strenv(EM_VAL)])) and
+            (.web_ncdomain | contains([strenv(NC_VAL)])))
+        then . + {"disable": true}
+        else .
         end
       )
     ' "$file"
+
+    unset EM_VAL NC_VAL
 }
 
 
 disable_twx_siteinfo() {
     local file="$1"
-    local twx="$2"
+    export TWX_VAL="$2"
 
     yq e -i '
       .siteinfo |= map(
-        if (.web_twxdomain | contains(["'"$twx"'"]))
-        then
-          .disable = true
-        else
-          .
+        if (.web_twxdomain | contains([strenv(TWX_VAL)]))
+        then . + {"disable": true}
+        else .
         end
       )
     ' "$file"
+
+    unset TWX_VAL
 }
+
 
 enable_ces_siteinfo() {
     local file="$1"
