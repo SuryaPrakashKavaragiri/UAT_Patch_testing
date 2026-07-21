@@ -231,7 +231,7 @@ disable_twx_siteinfo() {
 
     yq e -i '
       .siteinfo |= map(
-        if (.web_twxdomain | contains([strenv(TWX_VAL)]) then
+        if (.web_twxdomain | contains([strenv(TWX_VAL)])) then
           .disable = true
         else
           .
