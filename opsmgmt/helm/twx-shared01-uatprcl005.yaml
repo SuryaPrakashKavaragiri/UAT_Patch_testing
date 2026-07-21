@@ -16,6 +16,7 @@ siteinfo:
     db_username: WEB_USER
     web_twxdomain:
       - culvers-test.ct-teamworx.com
+    disable: true
   - db_password_vault_key: UAT_STANDARD
     db_port: '1521'
     db_server: uatprcl005.prod.crunchtime.it
