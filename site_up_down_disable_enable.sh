@@ -204,13 +204,13 @@ disable_ces_siteinfo() {
     export EM_VAL="$2"
     export NC_VAL="$3"
 
-    yq e -i '
-      (.siteinfo[] |
-        select(
+    yq -i '
+      .siteinfo[]
+      | select(
           (.web_emdomain | contains([strenv(EM_VAL)])) and
           (.web_ncdomain | contains([strenv(NC_VAL)]))
         )
-      ).disable = true
+      | .disable = true
     ' "$file"
     unset EM_VAL NC_VAL
 }
