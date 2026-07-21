@@ -259,43 +259,43 @@ disable_twx_siteinfo() {
 }
 
 
-
 enable_ces_siteinfo() {
     local file="$1"
-    local em="$2"
-    local nc="$3"
+    export EM_VAL="$2"
+    export NC_VAL="$3"
 
     yq e -i '
-      .siteinfo |= map(
-        if (.web_emdomain | contains(["'"$em"'"]))
-          and (.web_ncdomain | contains(["'"$nc"'"]))
-          and (.disable == true)
-        then
-          del(.disable)
-        else
-          .
-        end
-      )
+      (.siteinfo[] |
+        select(
+          (.web_emdomain | contains([strenv(EM_VAL)]))
+          and
+          (.web_ncdomain | contains([strenv(NC_VAL)]))
+          and
+          (.disable == true)
+        )
+      ) |= del(.disable)
     ' "$file"
+
+    unset EM_VAL NC_VAL
 }
 
 
 enable_twx_siteinfo() {
     local file="$1"
-    local twx="$2"
+    export TWX_VAL="$2"
 
     yq e -i '
-      .siteinfo |= map(
-        if (.web_twxdomain | contains(["'"$twx"'"])) and (.disable == true)
-        then
-          del(.disable)
-        else
-          .
-        end
-      )
+      (.siteinfo[] |
+        select(
+          (.web_twxdomain | contains([strenv(TWX_VAL)]))
+          and
+          (.disable == true)
+        )
+      ) |= del(.disable)
     ' "$file"
-}
 
+    unset TWX_VAL
+}
 
 
 
