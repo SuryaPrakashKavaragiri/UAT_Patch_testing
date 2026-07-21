@@ -201,16 +201,13 @@ remove_twx_siteinfo() {
 
 disable_ces_siteinfo() {
     local file="$1"
-    local em="$2"
-    local nc="$3"
+    export EM_VAL="$2"
+    export NC_VAL="$3"
 
     yq e -i '
       .siteinfo |= map(
-        if (
-          (.web_emdomain | contains(["'"$em"'"]))
-          and
-          (.web_ncdomain | contains(["'"$nc"'"]))
-        )
+        if (.web_emdomain | contains([strenv(EM_VAL)]))
+           and (.web_ncdomain | contains([strenv(NC_VAL)]))
         then
           .disable = true
         else
@@ -218,7 +215,10 @@ disable_ces_siteinfo() {
         end
       )
     ' "$file"
+
+    unset EM_VAL NC_VAL
 }
+
 
 
 
@@ -245,13 +245,9 @@ enable_ces_siteinfo() {
 
     yq e -i '
       .siteinfo |= map(
-        if (
-          (.web_emdomain | contains(["'"$em"'"]))
-          and
-          (.web_ncdomain | contains(["'"$nc"'"]))
-          and
-          (.disable == true)
-        )
+        if (.web_emdomain | contains(["'"$em"'"]))
+          and (.web_ncdomain | contains(["'"$nc"'"]))
+          and (.disable == true)
         then
           del(.disable)
         else
@@ -516,6 +512,7 @@ for SERVICE in "${SERVICES[@]}"; do
         em="${EM_WEB_DOMAIN[$idx]}"
         nc="${NC_WEB_DOMAIN[$idx]}"
         echo "EM=$em | NC=$nc"
+        found=false
         for file in "${ces_file_name[@]}"; do
           echo "Searching $file"
           if EM_VAL="$em" NC_VAL="$nc" yq e '
@@ -528,9 +525,16 @@ for SERVICE in "${SERVICES[@]}"; do
           ' "$file" | grep -q .; then
             echo "Found in $file"
             remove_ces_siteinfo "$file" "$em" "$nc"
+            found=true
             break
           fi
-        done  
+        done
+        if [[ "$found" == "false" ]]; then
+          echo "ERROR: CES site not found in any deployment file."
+          echo "EM Domain : $em"
+          echo "NC Domain : $nc"
+          exit 1
+        fi
       done
     fi
 
@@ -553,6 +557,10 @@ for SERVICE in "${SERVICES[@]}"; do
             break
           fi
         done
+        if [[ "$found" == "false" ]]; then
+          echo "ERROR: TWX domain '$twx' was not found in any deployment file."
+          exit 1
+        fi
       done
     fi
   ;;
@@ -608,7 +616,7 @@ for SERVICE in "${SERVICES[@]}"; do
         em="${EM_WEB_DOMAIN[$idx]}"
         nc="${NC_WEB_DOMAIN[$idx]}"
         echo "EM=$em | NC=$nc"
-        for file in "${ces_files_list[@]}"; do
+        for file in "${ces_file_name[@]}"; do
           echo "Searching $file"
           if EM_VAL="$em" NC_VAL="$nc" yq e '
           .siteinfo[]
