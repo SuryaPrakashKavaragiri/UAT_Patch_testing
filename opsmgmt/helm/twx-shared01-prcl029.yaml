@@ -1,488 +1,488 @@
 gateway:
   name: opsmgmt-gateway-04
   namespace: envoy-gateway-system-04
-
 siteinfo:
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: PHILZCOFFEE_APP
-  db_username: WEB_USER
-  web_twxdomain:
-  - philzcoffee.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FLANIGANS_APP
-  db_username: web_user
-  web_twxdomain:
-  - flanigans.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: WEB_USER
-  web_twxdomain:
-  - fsc.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0064
-  web_twxdomain:
-  - fsc0064.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0065
-  web_twxdomain:
-  - fsc0065.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0066
-  web_twxdomain:
-  - fsc0066.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0067
-  web_twxdomain:
-  - fsc0067.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0068
-  web_twxdomain:
-  - fsc0068.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0069
-  web_twxdomain:
-  - fsc0069.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0070
-  web_twxdomain:
-  - fsc0070.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0071
-  web_twxdomain:
-  - fsc0071.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0072
-  web_twxdomain:
-  - fsc0072.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0073
-  web_twxdomain:
-  - fsc0073.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0074
-  web_twxdomain:
-  - fsc0074.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0075
-  web_twxdomain:
-  - fsc0075.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0076
-  web_twxdomain:
-  - fsc0076.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0077
-  web_twxdomain:
-  - fsc0077.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0078
-  web_twxdomain:
-  - fsc0078.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0079
-  web_twxdomain:
-  - fsc0079.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0080
-  web_twxdomain:
-  - fsc0080.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0081
-  web_twxdomain:
-  - fsc0081.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0082
-  web_twxdomain:
-  - fsc0082.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0083
-  web_twxdomain:
-  - fsc0083.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0054
-  web_twxdomain:
-  - fsc0054.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0055
-  web_twxdomain:
-  - fsc0055.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0056
-  web_twxdomain:
-  - fsc0056.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0057
-  web_twxdomain:
-  - fsc0057.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0058
-  web_twxdomain:
-  - fsc0058.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0059
-  web_twxdomain:
-  - fsc0059.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0060
-  web_twxdomain:
-  - fsc0060.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0061
-  web_twxdomain:
-  - fsc0061.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0062
-  web_twxdomain:
-  - fsc0062.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0063
-  web_twxdomain:
-  - fsc0063.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0048
-  web_twxdomain:
-  - fsc0048.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0049
-  web_twxdomain:
-  - fsc0049.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0050
-  web_twxdomain:
-  - fsc0050.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0051
-  web_twxdomain:
-  - fsc0051.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0052
-  web_twxdomain:
-  - fsc0052.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0053
-  web_twxdomain:
-  - fsc0053.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0001
-  web_twxdomain:
-  - fsc0001.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0002
-  web_twxdomain:
-  - fsc0002.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0003
-  web_twxdomain:
-  - fsc0003.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0004
-  web_twxdomain:
-  - fsc0004.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0005
-  web_twxdomain:
-  - fsc0005.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0006
-  web_twxdomain:
-  - fsc0006.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0007
-  web_twxdomain:
-  - fsc0007.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0008
-  web_twxdomain:
-  - fsc0008.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0009
-  web_twxdomain:
-  - fsc0009.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0010
-  web_twxdomain:
-  - fsc0010.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0011
-  web_twxdomain:
-  - fsc0011.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0012
-  web_twxdomain:
-  - fsc0012.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0013
-  web_twxdomain:
-  - fsc0013.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0014
-  web_twxdomain:
-  - fsc0014.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0015
-  web_twxdomain:
-  - fsc0015.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0016
-  web_twxdomain:
-  - fsc0016.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0017
-  web_twxdomain:
-  - fsc0017.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0018
-  web_twxdomain:
-  - fsc0018.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0019
-  web_twxdomain:
-  - fsc0019.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0020
-  web_twxdomain:
-  - fsc0020.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0021
-  web_twxdomain:
-  - fsc0021.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0022
-  web_twxdomain:
-  - fsc0022.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0023
-  web_twxdomain:
-  - fsc0023.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0024
-  web_twxdomain:
-  - fsc0024.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0025
-  web_twxdomain:
-  - fsc0025.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0026
-  web_twxdomain:
-  - fsc0026.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0027
-  web_twxdomain:
-  - fsc0027.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0028
-  web_twxdomain:
-  - fsc0028.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0029
-  web_twxdomain:
-  - fsc0029.ct-teamworx.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0030
-  web_twxdomain:
-  - fsc0030.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: PHILZCOFFEE_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - philzcoffee.ct-teamworx.com
+    disable: true
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FLANIGANS_APP
+    db_username: web_user
+    web_twxdomain:
+      - flanigans.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: WEB_USER
+    web_twxdomain:
+      - fsc.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0064
+    web_twxdomain:
+      - fsc0064.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0065
+    web_twxdomain:
+      - fsc0065.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0066
+    web_twxdomain:
+      - fsc0066.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0067
+    web_twxdomain:
+      - fsc0067.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0068
+    web_twxdomain:
+      - fsc0068.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0069
+    web_twxdomain:
+      - fsc0069.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0070
+    web_twxdomain:
+      - fsc0070.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0071
+    web_twxdomain:
+      - fsc0071.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0072
+    web_twxdomain:
+      - fsc0072.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0073
+    web_twxdomain:
+      - fsc0073.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0074
+    web_twxdomain:
+      - fsc0074.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0075
+    web_twxdomain:
+      - fsc0075.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0076
+    web_twxdomain:
+      - fsc0076.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0077
+    web_twxdomain:
+      - fsc0077.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0078
+    web_twxdomain:
+      - fsc0078.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0079
+    web_twxdomain:
+      - fsc0079.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0080
+    web_twxdomain:
+      - fsc0080.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0081
+    web_twxdomain:
+      - fsc0081.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0082
+    web_twxdomain:
+      - fsc0082.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0083
+    web_twxdomain:
+      - fsc0083.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0054
+    web_twxdomain:
+      - fsc0054.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0055
+    web_twxdomain:
+      - fsc0055.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0056
+    web_twxdomain:
+      - fsc0056.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0057
+    web_twxdomain:
+      - fsc0057.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0058
+    web_twxdomain:
+      - fsc0058.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0059
+    web_twxdomain:
+      - fsc0059.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0060
+    web_twxdomain:
+      - fsc0060.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0061
+    web_twxdomain:
+      - fsc0061.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0062
+    web_twxdomain:
+      - fsc0062.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0063
+    web_twxdomain:
+      - fsc0063.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0048
+    web_twxdomain:
+      - fsc0048.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0049
+    web_twxdomain:
+      - fsc0049.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0050
+    web_twxdomain:
+      - fsc0050.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0051
+    web_twxdomain:
+      - fsc0051.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0052
+    web_twxdomain:
+      - fsc0052.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0053
+    web_twxdomain:
+      - fsc0053.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0001
+    web_twxdomain:
+      - fsc0001.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0002
+    web_twxdomain:
+      - fsc0002.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0003
+    web_twxdomain:
+      - fsc0003.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0004
+    web_twxdomain:
+      - fsc0004.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0005
+    web_twxdomain:
+      - fsc0005.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0006
+    web_twxdomain:
+      - fsc0006.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0007
+    web_twxdomain:
+      - fsc0007.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0008
+    web_twxdomain:
+      - fsc0008.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0009
+    web_twxdomain:
+      - fsc0009.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0010
+    web_twxdomain:
+      - fsc0010.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0011
+    web_twxdomain:
+      - fsc0011.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0012
+    web_twxdomain:
+      - fsc0012.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0013
+    web_twxdomain:
+      - fsc0013.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0014
+    web_twxdomain:
+      - fsc0014.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0015
+    web_twxdomain:
+      - fsc0015.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0016
+    web_twxdomain:
+      - fsc0016.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0017
+    web_twxdomain:
+      - fsc0017.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0018
+    web_twxdomain:
+      - fsc0018.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0019
+    web_twxdomain:
+      - fsc0019.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0020
+    web_twxdomain:
+      - fsc0020.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0021
+    web_twxdomain:
+      - fsc0021.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0022
+    web_twxdomain:
+      - fsc0022.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0023
+    web_twxdomain:
+      - fsc0023.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0024
+    web_twxdomain:
+      - fsc0024.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0025
+    web_twxdomain:
+      - fsc0025.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0026
+    web_twxdomain:
+      - fsc0026.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0027
+    web_twxdomain:
+      - fsc0027.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0028
+    web_twxdomain:
+      - fsc0028.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0029
+    web_twxdomain:
+      - fsc0029.ct-teamworx.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0030
+    web_twxdomain:
+      - fsc0030.ct-teamworx.com
