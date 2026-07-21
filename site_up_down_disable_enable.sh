@@ -204,19 +204,29 @@ disable_ces_siteinfo() {
     export EM_VAL="$2"
     export NC_VAL="$3"
 
+    # yq e -i '
+    #   .siteinfo |= map(
+    #     if (
+    #       (.web_emdomain | contains([strenv(EM_VAL)]))
+    #       and
+    #       (.web_ncdomain | contains([strenv(NC_VAL)]))
+    #     )
+    #     then
+    #       .disable = true
+    #     else
+    #       .
+    #     end
+    #   )
+    # ' "$file"
+
     yq e -i '
-      .siteinfo |= map(
-        if (
+      (.siteinfo[] |
+        select(
           (.web_emdomain | contains([strenv(EM_VAL)]))
           and
           (.web_ncdomain | contains([strenv(NC_VAL)]))
         )
-        then
-          .disable = true
-        else
-          .
-        end
-      )
+      ).disable = true
     ' "$file"
 
     unset EM_VAL NC_VAL
