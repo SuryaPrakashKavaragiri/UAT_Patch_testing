@@ -1,16 +1,6 @@
 #!/bin/bash
-
+set -x
 yq --version
 
-
-yq e '
-.siteinfo |= map(
-  if .domain == "panda-test2.net-chef.com"
-  then
-    . + {"disable": true}
-  else
-    .
-  end
-)
-' test.yaml
+yq e '(.siteinfo[] | select(.domain == "panda-test2.net-chef.com")).disable = true' test.yaml
 
