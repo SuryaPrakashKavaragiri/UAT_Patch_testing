@@ -205,21 +205,21 @@ disable_ces_siteinfo() {
     export NC_VAL="$3"
 
     yq e -i '
-      .siteinfo |= map(
-        if (.web_emdomain | contains([strenv(EM_VAL)]))
-           and (.web_ncdomain | contains([strenv(NC_VAL)]))
-        then
-          .disable = true
-        else
-          .
-        end
-      )
+      (.siteinfo[] |
+        select(
+          (.web_emdomain | contains([strenv(EM_VAL)])) and
+          (.web_ncdomain | contains([strenv(NC_VAL)]))
+        )
+      ).disable = true
     ' "$file"
-
     unset EM_VAL NC_VAL
 }
 
-
+yq e '
+.siteinfo |= map(
+  if true then . else . end
+)
+' ces-shared01-prcl029.yaml
 
 
 disable_twx_siteinfo() {
