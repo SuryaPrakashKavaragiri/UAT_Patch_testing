@@ -206,10 +206,15 @@ disable_ces_siteinfo() {
 
     yq e -i '
       .siteinfo |= map(
-        if ((.web_emdomain | contains([strenv(EM_VAL)])) and
-            (.web_ncdomain | contains([strenv(NC_VAL)])))
-        then . + {"disable": true}
-        else .
+        if (
+          (.web_emdomain | contains([strenv(EM_VAL)]))
+          and
+          (.web_ncdomain | contains([strenv(NC_VAL)]))
+        )
+        then
+          .disable = true
+        else
+          .
         end
       )
     ' "$file"
@@ -218,21 +223,25 @@ disable_ces_siteinfo() {
 }
 
 
+
+
 disable_twx_siteinfo() {
     local file="$1"
     export TWX_VAL="$2"
 
     yq e -i '
       .siteinfo |= map(
-        if (.web_twxdomain | contains([strenv(TWX_VAL)]))
-        then . + {"disable": true}
-        else .
+        if (.web_twxdomain | contains([strenv(TWX_VAL)]) then
+          .disable = true
+        else
+          .
         end
       )
     ' "$file"
 
     unset TWX_VAL
 }
+
 
 
 enable_ces_siteinfo() {
