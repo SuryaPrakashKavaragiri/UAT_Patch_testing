@@ -116,26 +116,6 @@ if [[ "$TYPE" == "Site up" ]]; then
   validate_site_bring_up_data
 fi
 
-# if [[ -z "$SITE_BRING_UP_DATA" ]]; then
-#     echo "SITE_BRING_UP_DATA not provided"
-#     exit 1
-# fi
-
-# if [[ -z "${SITE_BRING_UP_DATA//[[:space:]]/}" ]]; then
-#     echo "SITE_BRING_UP_DATA not provided"
-#     exit 1
-# fi
-
-
-
-# if [[ "$TYPE" == "Site up" && "$CES_TWX" == "ces" ]]; then
-#     : "${CES_DEPLOYMENT_NAME:?CES_DEPLOYMENT_NAME not provided}"
-# fi
-
-# if [[ "$TYPE" == "Site up" && "$CES_TWX" == "twx" ]]; then
-#     : "${TWX_DEPLOYMENT_NAME:?TWX_DEPLOYMENT_NAME not provided}"
-# fi
-
 
 if [[ "$TYPE" == "Site up" && "$CES_TWX" == *"ces"* ]]; then
     if [[ -z "${CES_DEPLOYMENT_NAME%,}" ]]; then
@@ -165,14 +145,10 @@ REPO_NAME="UAT_Patch_testing"
 
 # Update YAML tag
 #########################################
-
-
 remove_ces_siteinfo() {
     local file="$1"
     local em="$2"
     local nc="$3"
-
-      #yq e -i --arg em "$em_domain" --arg nc "$nc_domain" '
       yq e -i '
         .siteinfo |= map(
           select(
@@ -188,7 +164,6 @@ remove_twx_siteinfo() {
     local file="$1"
     local twx="$2"
 
-      #yq e -i --arg twx "$twx_domain" '
       yq e -i '
         .siteinfo |= map(
           select(
@@ -203,21 +178,6 @@ disable_ces_siteinfo() {
     local file="$1"
     export EM_VAL="$2"
     export NC_VAL="$3"
-
-    # yq e -i '
-    #   .siteinfo |= map(
-    #     if (
-    #       (.web_emdomain | contains([strenv(EM_VAL)]))
-    #       and
-    #       (.web_ncdomain | contains([strenv(NC_VAL)]))
-    #     )
-    #     then
-    #       .disable = true
-    #     else
-    #       .
-    #     end
-    #   )
-    # ' "$file"
 
     yq e -i '
       (.siteinfo[] |
@@ -238,16 +198,6 @@ disable_ces_siteinfo() {
 disable_twx_siteinfo() {
     local file="$1"
     export TWX_VAL="$2"
-
-    # yq e -i '
-    #   .siteinfo |= map(
-    #     if (.web_twxdomain | contains([strenv(TWX_VAL)])) then
-    #       .disable = true
-    #     else
-    #       .
-    #     end
-    #   )
-    # ' "$file"
 
     yq e -i '
       (.siteinfo[] |
