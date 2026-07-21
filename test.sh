@@ -1,5 +1,8 @@
 #!/bin/bash
 
+yq --version
+
+
 yq e '
 .siteinfo |= map(
   if .domain == "panda-test2.net-chef.com"
