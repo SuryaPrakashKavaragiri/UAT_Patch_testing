@@ -201,17 +201,25 @@ remove_twx_siteinfo() {
 
 disable_ces_siteinfo() {
     local file="$1"
-    export EM_VAL="$2"
-    export NC_VAL="$3"
+    local em="$2"
+    local nc="$3"
 
-    yq -i '
-      (.siteinfo[] | select(
-          (.web_emdomain | contains([strenv(EM_VAL)])) and
-          (.web_ncdomain | contains([strenv(NC_VAL)]))
-      )).disable = true
+    yq e -i '
+      .siteinfo |= map(
+        if (
+          (.web_emdomain | contains(["'"$em"'"]))
+          and
+          (.web_ncdomain | contains(["'"$nc"'"]))
+        )
+        then
+          . + {"disable": true}
+        else
+          .
+        end
+      )
     ' "$file"
-    unset EM_VAL NC_VAL
 }
+
 
 disable_twx_siteinfo() {
     local file="$1"
@@ -265,41 +273,14 @@ enable_twx_siteinfo() {
     ' "$file"
 }
 
-# add_siteinfo() {
-#     local file="$1"
-#     local data="$2"
 
-#     yq -i '.siteinfo += [load("/dev/stdin")]' "$file" <<< "$data"
-# }
-
-
-# add_siteinfo() {
-#     local file=$1
-#     local data=$2
-
-#     local tmpfile
-#     tmpfile=$(mktemp)
-
-#     printf '%s\n' "$data" > "$tmpfile"
-
-#     # Convert Git Bash path to Windows path
-#     local tmpfile_win
-#     tmpfile_win=$(cygpath -w "$tmpfile")
-
-#     yq -i ".siteinfo += [load(\"$tmpfile_win\")]" "$file"
-
-#     rm -f "$tmpfile"
-# }
 
 
 add_siteinfo() {
     local file=$1
     local data=$2
-
     export SITEINFO_DATA="$data"
-
     yq -i '.siteinfo += [strenv(SITEINFO_DATA) | from_yaml]' "$file"
-
     unset SITEINFO_DATA
 }
 
