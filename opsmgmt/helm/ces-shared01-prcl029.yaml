@@ -1,653 +1,653 @@
 gateway:
   name: opsmgmt-gateway-01
   namespace: envoy-gateway-system-01
-
 siteinfo:
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: PHILZCOFFEE_APP
-  db_username: WEB_USER
-  web_emdomain:
-  - philzcoffee-em.net-chef.com
-  web_ncdomain:
-  - philzcoffee.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: COOPERSHAWK_APP
-  db_username: WEB_USER
-  web_emdomain:
-  - coopershawk-em.net-chef.com
-  web_ncdomain:
-  - coopershawk.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: TACOTIMENW_APP
-  db_username: WEB_USER
-  web_emdomain:
-  - tacotimenw-em.net-chef.com
-  web_ncdomain:
-  - tacotimenw.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FLANIGANS_APP
-  db_username: WEB_USER
-  web_emdomain:
-  - flanigans-em.net-chef.com
-  web_ncdomain:
-  - flanigans.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: WEB_USER
-  web_emdomain:
-  - fsc-em.net-chef.com
-  web_ncdomain:
-  - fsc.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0064
-  web_emdomain:
-  - fsc0064-em.net-chef.com
-  web_ncdomain:
-  - fsc0064.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0065
-  web_emdomain:
-  - fsc0065-em.net-chef.com
-  web_ncdomain:
-  - fsc0065.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0066
-  web_emdomain:
-  - fsc0066-em.net-chef.com
-  web_ncdomain:
-  - fsc0066.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0067
-  web_emdomain:
-  - fsc0067-em.net-chef.com
-  web_ncdomain:
-  - fsc0067.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0068
-  web_emdomain:
-  - fsc0068-em.net-chef.com
-  web_ncdomain:
-  - fsc0068.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0069
-  web_emdomain:
-  - fsc0069-em.net-chef.com
-  web_ncdomain:
-  - fsc0069.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0070
-  web_emdomain:
-  - fsc0070-em.net-chef.com
-  web_ncdomain:
-  - fsc0070.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0071
-  web_emdomain:
-  - fsc0071-em.net-chef.com
-  web_ncdomain:
-  - fsc0071.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0072
-  web_emdomain:
-  - fsc0072-em.net-chef.com
-  web_ncdomain:
-  - fsc0072.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0073
-  web_emdomain:
-  - fsc0073-em.net-chef.com
-  web_ncdomain:
-  - fsc0073.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0074
-  web_emdomain:
-  - fsc0074-em.net-chef.com
-  web_ncdomain:
-  - fsc0074.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0075
-  web_emdomain:
-  - fsc0075-em.net-chef.com
-  web_ncdomain:
-  - fsc0075.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0076
-  web_emdomain:
-  - fsc0076-em.net-chef.com
-  web_ncdomain:
-  - fsc0076.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0077
-  web_emdomain:
-  - fsc0077-em.net-chef.com
-  web_ncdomain:
-  - fsc0077.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0078
-  web_emdomain:
-  - fsc0078-em.net-chef.com
-  web_ncdomain:
-  - fsc0078.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0079
-  web_emdomain:
-  - fsc0079-em.net-chef.com
-  web_ncdomain:
-  - fsc0079.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0080
-  web_emdomain:
-  - fsc0080-em.net-chef.com
-  web_ncdomain:
-  - fsc0080.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0081
-  web_emdomain:
-  - fsc0081-em.net-chef.com
-  web_ncdomain:
-  - fsc0081.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0082
-  web_emdomain:
-  - fsc0082-em.net-chef.com
-  web_ncdomain:
-  - fsc0082.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0083
-  web_emdomain:
-  - fsc0083-em.net-chef.com
-  web_ncdomain:
-  - fsc0083.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0054
-  web_emdomain:
-  - fsc0054-em.net-chef.com
-  web_ncdomain:
-  - fsc0054.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0055
-  web_emdomain:
-  - fsc0055-em.net-chef.com
-  web_ncdomain:
-  - fsc0055.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0056
-  web_emdomain:
-  - fsc0056-em.net-chef.com
-  web_ncdomain:
-  - fsc0056.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0057
-  web_emdomain:
-  - fsc0057-em.net-chef.com
-  web_ncdomain:
-  - fsc0057.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0058
-  web_emdomain:
-  - fsc0058-em.net-chef.com
-  web_ncdomain:
-  - fsc0058.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0059
-  web_emdomain:
-  - fsc0059-em.net-chef.com
-  web_ncdomain:
-  - fsc0059.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0060
-  web_emdomain:
-  - fsc0060-em.net-chef.com
-  web_ncdomain:
-  - fsc0060.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0061
-  web_emdomain:
-  - fsc0061-em.net-chef.com
-  web_ncdomain:
-  - fsc0061.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0062
-  web_emdomain:
-  - fsc0062-em.net-chef.com
-  web_ncdomain:
-  - fsc0062.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0063
-  web_emdomain:
-  - fsc0063-em.net-chef.com
-  web_ncdomain:
-  - fsc0063.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0048
-  web_emdomain:
-  - fsc0048-em.net-chef.com
-  web_ncdomain:
-  - fsc0048.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0049
-  web_emdomain:
-  - fsc0049-em.net-chef.com
-  web_ncdomain:
-  - fsc0049.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0050
-  web_emdomain:
-  - fsc0050-em.net-chef.com
-  web_ncdomain:
-  - fsc0050.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0051
-  web_emdomain:
-  - fsc0051-em.net-chef.com
-  web_ncdomain:
-  - fsc0051.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0052
-  web_emdomain:
-  - fsc0052-em.net-chef.com
-  web_ncdomain:
-  - fsc0052.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0053
-  web_emdomain:
-  - fsc0053-em.net-chef.com
-  web_ncdomain:
-  - fsc0053.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0001
-  web_emdomain:
-  - fsc0001-em.net-chef.com
-  web_ncdomain:
-  - fsc0001.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0002
-  web_emdomain:
-  - fsc0002-em.net-chef.com
-  web_ncdomain:
-  - fsc0002.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0003
-  web_emdomain:
-  - fsc0003-em.net-chef.com
-  web_ncdomain:
-  - fsc0003.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0004
-  web_emdomain:
-  - fsc0004-em.net-chef.com
-  web_ncdomain:
-  - fsc0004.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0005
-  web_emdomain:
-  - fsc0005-em.net-chef.com
-  web_ncdomain:
-  - fsc0005.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0006
-  web_emdomain:
-  - fsc0006-em.net-chef.com
-  web_ncdomain:
-  - fsc0006.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0007
-  web_emdomain:
-  - fsc0007-em.net-chef.com
-  web_ncdomain:
-  - fsc0007.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0008
-  web_emdomain:
-  - fsc0008-em.net-chef.com
-  web_ncdomain:
-  - fsc0008.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0009
-  web_emdomain:
-  - fsc0009-em.net-chef.com
-  web_ncdomain:
-  - fsc0009.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0010
-  web_emdomain:
-  - fsc0010-em.net-chef.com
-  web_ncdomain:
-  - fsc0010.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0011
-  web_emdomain:
-  - fsc0011-em.net-chef.com
-  web_ncdomain:
-  - fsc0011.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0012
-  web_emdomain:
-  - fsc0012-em.net-chef.com
-  web_ncdomain:
-  - fsc0012.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0013
-  web_emdomain:
-  - fsc0013-em.net-chef.com
-  web_ncdomain:
-  - fsc0013.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0014
-  web_emdomain:
-  - fsc0014-em.net-chef.com
-  web_ncdomain:
-  - fsc0014.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0015
-  web_emdomain:
-  - fsc0015-em.net-chef.com
-  web_ncdomain:
-  - fsc0015.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0016
-  web_emdomain:
-  - fsc0016-em.net-chef.com
-  web_ncdomain:
-  - fsc0016.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0017
-  web_emdomain:
-  - fsc0017-em.net-chef.com
-  web_ncdomain:
-  - fsc0017.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0018
-  web_emdomain:
-  - fsc0018-em.net-chef.com
-  web_ncdomain:
-  - fsc0018.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0019
-  web_emdomain:
-  - fsc0019-em.net-chef.com
-  web_ncdomain:
-  - fsc0019.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0020
-  web_emdomain:
-  - fsc0020-em.net-chef.com
-  web_ncdomain:
-  - fsc0020.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0021
-  web_emdomain:
-  - fsc0021-em.net-chef.com
-  web_ncdomain:
-  - fsc0021.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0022
-  web_emdomain:
-  - fsc0022-em.net-chef.com
-  web_ncdomain:
-  - fsc0022.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0023
-  web_emdomain:
-  - fsc0023-em.net-chef.com
-  web_ncdomain:
-  - fsc0023.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0024
-  web_emdomain:
-  - fsc0024-em.net-chef.com
-  web_ncdomain:
-  - fsc0024.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0025
-  web_emdomain:
-  - fsc0025-em.net-chef.com
-  web_ncdomain:
-  - fsc0025.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0026
-  web_emdomain:
-  - fsc0026-em.net-chef.com
-  web_ncdomain:
-  - fsc0026.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0027
-  web_emdomain:
-  - fsc0027-em.net-chef.com
-  web_ncdomain:
-  - fsc0027.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0028
-  web_emdomain:
-  - fsc0028-em.net-chef.com
-  web_ncdomain:
-  - fsc0028.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0029
-  web_emdomain:
-  - fsc0029-em.net-chef.com
-  web_ncdomain:
-  - fsc0029.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: FSC_APP
-  db_username: FR_0030
-  web_emdomain:
-  - fsc0030-em.net-chef.com
-  web_ncdomain:
-  - fsc0030.net-chef.com
-- db_password_vault_key: PROD_STANDARD
-  db_port: '1521'
-  db_server: prcl029.prod.crunchtime.it
-  db_servicename: TGIUK_APP
-  db_username: WEB_USER
-  web_emdomain:
-  - tgiuk-em.net-chef.com
-  web_ncdomain:
-  - tgiuk.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: PHILZCOFFEE_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - philzcoffee-em.net-chef.com
+    web_ncdomain:
+      - philzcoffee.net-chef.com
+    disable: true
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: COOPERSHAWK_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - coopershawk-em.net-chef.com
+    web_ncdomain:
+      - coopershawk.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: TACOTIMENW_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - tacotimenw-em.net-chef.com
+    web_ncdomain:
+      - tacotimenw.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FLANIGANS_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - flanigans-em.net-chef.com
+    web_ncdomain:
+      - flanigans.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - fsc-em.net-chef.com
+    web_ncdomain:
+      - fsc.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0064
+    web_emdomain:
+      - fsc0064-em.net-chef.com
+    web_ncdomain:
+      - fsc0064.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0065
+    web_emdomain:
+      - fsc0065-em.net-chef.com
+    web_ncdomain:
+      - fsc0065.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0066
+    web_emdomain:
+      - fsc0066-em.net-chef.com
+    web_ncdomain:
+      - fsc0066.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0067
+    web_emdomain:
+      - fsc0067-em.net-chef.com
+    web_ncdomain:
+      - fsc0067.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0068
+    web_emdomain:
+      - fsc0068-em.net-chef.com
+    web_ncdomain:
+      - fsc0068.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0069
+    web_emdomain:
+      - fsc0069-em.net-chef.com
+    web_ncdomain:
+      - fsc0069.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0070
+    web_emdomain:
+      - fsc0070-em.net-chef.com
+    web_ncdomain:
+      - fsc0070.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0071
+    web_emdomain:
+      - fsc0071-em.net-chef.com
+    web_ncdomain:
+      - fsc0071.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0072
+    web_emdomain:
+      - fsc0072-em.net-chef.com
+    web_ncdomain:
+      - fsc0072.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0073
+    web_emdomain:
+      - fsc0073-em.net-chef.com
+    web_ncdomain:
+      - fsc0073.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0074
+    web_emdomain:
+      - fsc0074-em.net-chef.com
+    web_ncdomain:
+      - fsc0074.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0075
+    web_emdomain:
+      - fsc0075-em.net-chef.com
+    web_ncdomain:
+      - fsc0075.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0076
+    web_emdomain:
+      - fsc0076-em.net-chef.com
+    web_ncdomain:
+      - fsc0076.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0077
+    web_emdomain:
+      - fsc0077-em.net-chef.com
+    web_ncdomain:
+      - fsc0077.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0078
+    web_emdomain:
+      - fsc0078-em.net-chef.com
+    web_ncdomain:
+      - fsc0078.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0079
+    web_emdomain:
+      - fsc0079-em.net-chef.com
+    web_ncdomain:
+      - fsc0079.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0080
+    web_emdomain:
+      - fsc0080-em.net-chef.com
+    web_ncdomain:
+      - fsc0080.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0081
+    web_emdomain:
+      - fsc0081-em.net-chef.com
+    web_ncdomain:
+      - fsc0081.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0082
+    web_emdomain:
+      - fsc0082-em.net-chef.com
+    web_ncdomain:
+      - fsc0082.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0083
+    web_emdomain:
+      - fsc0083-em.net-chef.com
+    web_ncdomain:
+      - fsc0083.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0054
+    web_emdomain:
+      - fsc0054-em.net-chef.com
+    web_ncdomain:
+      - fsc0054.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0055
+    web_emdomain:
+      - fsc0055-em.net-chef.com
+    web_ncdomain:
+      - fsc0055.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0056
+    web_emdomain:
+      - fsc0056-em.net-chef.com
+    web_ncdomain:
+      - fsc0056.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0057
+    web_emdomain:
+      - fsc0057-em.net-chef.com
+    web_ncdomain:
+      - fsc0057.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0058
+    web_emdomain:
+      - fsc0058-em.net-chef.com
+    web_ncdomain:
+      - fsc0058.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0059
+    web_emdomain:
+      - fsc0059-em.net-chef.com
+    web_ncdomain:
+      - fsc0059.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0060
+    web_emdomain:
+      - fsc0060-em.net-chef.com
+    web_ncdomain:
+      - fsc0060.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0061
+    web_emdomain:
+      - fsc0061-em.net-chef.com
+    web_ncdomain:
+      - fsc0061.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0062
+    web_emdomain:
+      - fsc0062-em.net-chef.com
+    web_ncdomain:
+      - fsc0062.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0063
+    web_emdomain:
+      - fsc0063-em.net-chef.com
+    web_ncdomain:
+      - fsc0063.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0048
+    web_emdomain:
+      - fsc0048-em.net-chef.com
+    web_ncdomain:
+      - fsc0048.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0049
+    web_emdomain:
+      - fsc0049-em.net-chef.com
+    web_ncdomain:
+      - fsc0049.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0050
+    web_emdomain:
+      - fsc0050-em.net-chef.com
+    web_ncdomain:
+      - fsc0050.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0051
+    web_emdomain:
+      - fsc0051-em.net-chef.com
+    web_ncdomain:
+      - fsc0051.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0052
+    web_emdomain:
+      - fsc0052-em.net-chef.com
+    web_ncdomain:
+      - fsc0052.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0053
+    web_emdomain:
+      - fsc0053-em.net-chef.com
+    web_ncdomain:
+      - fsc0053.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0001
+    web_emdomain:
+      - fsc0001-em.net-chef.com
+    web_ncdomain:
+      - fsc0001.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0002
+    web_emdomain:
+      - fsc0002-em.net-chef.com
+    web_ncdomain:
+      - fsc0002.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0003
+    web_emdomain:
+      - fsc0003-em.net-chef.com
+    web_ncdomain:
+      - fsc0003.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0004
+    web_emdomain:
+      - fsc0004-em.net-chef.com
+    web_ncdomain:
+      - fsc0004.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0005
+    web_emdomain:
+      - fsc0005-em.net-chef.com
+    web_ncdomain:
+      - fsc0005.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0006
+    web_emdomain:
+      - fsc0006-em.net-chef.com
+    web_ncdomain:
+      - fsc0006.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0007
+    web_emdomain:
+      - fsc0007-em.net-chef.com
+    web_ncdomain:
+      - fsc0007.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0008
+    web_emdomain:
+      - fsc0008-em.net-chef.com
+    web_ncdomain:
+      - fsc0008.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0009
+    web_emdomain:
+      - fsc0009-em.net-chef.com
+    web_ncdomain:
+      - fsc0009.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0010
+    web_emdomain:
+      - fsc0010-em.net-chef.com
+    web_ncdomain:
+      - fsc0010.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0011
+    web_emdomain:
+      - fsc0011-em.net-chef.com
+    web_ncdomain:
+      - fsc0011.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0012
+    web_emdomain:
+      - fsc0012-em.net-chef.com
+    web_ncdomain:
+      - fsc0012.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0013
+    web_emdomain:
+      - fsc0013-em.net-chef.com
+    web_ncdomain:
+      - fsc0013.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0014
+    web_emdomain:
+      - fsc0014-em.net-chef.com
+    web_ncdomain:
+      - fsc0014.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0015
+    web_emdomain:
+      - fsc0015-em.net-chef.com
+    web_ncdomain:
+      - fsc0015.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0016
+    web_emdomain:
+      - fsc0016-em.net-chef.com
+    web_ncdomain:
+      - fsc0016.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0017
+    web_emdomain:
+      - fsc0017-em.net-chef.com
+    web_ncdomain:
+      - fsc0017.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0018
+    web_emdomain:
+      - fsc0018-em.net-chef.com
+    web_ncdomain:
+      - fsc0018.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0019
+    web_emdomain:
+      - fsc0019-em.net-chef.com
+    web_ncdomain:
+      - fsc0019.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0020
+    web_emdomain:
+      - fsc0020-em.net-chef.com
+    web_ncdomain:
+      - fsc0020.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0021
+    web_emdomain:
+      - fsc0021-em.net-chef.com
+    web_ncdomain:
+      - fsc0021.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0022
+    web_emdomain:
+      - fsc0022-em.net-chef.com
+    web_ncdomain:
+      - fsc0022.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0023
+    web_emdomain:
+      - fsc0023-em.net-chef.com
+    web_ncdomain:
+      - fsc0023.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0024
+    web_emdomain:
+      - fsc0024-em.net-chef.com
+    web_ncdomain:
+      - fsc0024.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0025
+    web_emdomain:
+      - fsc0025-em.net-chef.com
+    web_ncdomain:
+      - fsc0025.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0026
+    web_emdomain:
+      - fsc0026-em.net-chef.com
+    web_ncdomain:
+      - fsc0026.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0027
+    web_emdomain:
+      - fsc0027-em.net-chef.com
+    web_ncdomain:
+      - fsc0027.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0028
+    web_emdomain:
+      - fsc0028-em.net-chef.com
+    web_ncdomain:
+      - fsc0028.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0029
+    web_emdomain:
+      - fsc0029-em.net-chef.com
+    web_ncdomain:
+      - fsc0029.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: FSC_APP
+    db_username: FR_0030
+    web_emdomain:
+      - fsc0030-em.net-chef.com
+    web_ncdomain:
+      - fsc0030.net-chef.com
+  - db_password_vault_key: PROD_STANDARD
+    db_port: '1521'
+    db_server: prcl029.prod.crunchtime.it
+    db_servicename: TGIUK_APP
+    db_username: WEB_USER
+    web_emdomain:
+      - tgiuk-em.net-chef.com
+    web_ncdomain:
+      - tgiuk.net-chef.com
