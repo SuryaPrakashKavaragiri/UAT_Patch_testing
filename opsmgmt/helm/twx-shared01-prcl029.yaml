@@ -17,6 +17,7 @@ siteinfo:
     db_username: web_user
     web_twxdomain:
       - flanigans.ct-teamworx.com
+    disable: true
   - db_password_vault_key: PROD_STANDARD
     db_port: '1521'
     db_server: prcl029.prod.crunchtime.it
