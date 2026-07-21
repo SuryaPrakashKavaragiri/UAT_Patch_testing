@@ -215,13 +215,6 @@ disable_ces_siteinfo() {
     unset EM_VAL NC_VAL
 }
 
-yq e '
-.siteinfo |= map(
-  if true then . else . end
-)
-' ces-shared01-prcl029.yaml
-
-
 disable_twx_siteinfo() {
     local file="$1"
     local twx="$2"
