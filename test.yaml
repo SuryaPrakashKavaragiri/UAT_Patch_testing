@@ -1,0 +1,5 @@
+siteinfo:
+  - domain: panda-test2.net-chef.com
+    name: test1
+  - domain: abc.net-chef.com
+    name: test2
