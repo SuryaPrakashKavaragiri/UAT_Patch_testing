@@ -582,7 +582,7 @@ for SERVICE in "${SERVICES[@]}"; do
     #     done  
     #   done
     # fi
-    
+
     if [[ "$SERVICE" == "ces" ]]; then
       for idx in "${!EM_WEB_DOMAIN[@]}"; do
         em="${EM_WEB_DOMAIN[$idx]}"
@@ -622,7 +622,7 @@ for SERVICE in "${SERVICES[@]}"; do
                 enable_ces_siteinfo "$file" "$em" "$nc"
 
             else
-                echo "ERROR: Site $nc is already enabled."
+                echo "ERROR: Site $em & $nc is already enabled."
                 exit 1
             fi
 
@@ -642,22 +642,50 @@ for SERVICE in "${SERVICES[@]}"; do
     if [[ "$SERVICE" == "twx" ]]; then
       for twx in "${TWX_WEB_DOMAIN[@]}"; do
         [[ -z "$twx" ]] && continue
+
         echo "TWX=$twx"
+
         found=false
+
         for file in "${twx_files_list[@]}"; do
           echo "Searching $file"
+
+          # Check whether the site exists
           if TWX_VAL="$twx" yq e '
           .siteinfo[]
           | select(
               (.web_twxdomain[] == strenv(TWX_VAL))
           )
           ' "$file" | grep -q .; then
-            echo "Found in $file"
-            enable_twx_siteinfo "$file" "$twx"
+
             found=true
+
+            # Check whether it is actually disabled
+            if TWX_VAL="$twx" yq e '
+            .siteinfo[]
+            | select(
+                (.web_twxdomain[] == strenv(TWX_VAL))
+                and
+                (.disable == true)
+            )
+            ' "$file" | grep -q .; then
+
+              echo "Found disabled site in $file"
+              enable_twx_siteinfo "$file" "$twx"
+
+            else
+              echo "ERROR: Site $twx is already enabled."
+              exit 1
+            fi
+
             break
           fi
         done
+
+        if [[ "$found" == "false" ]]; then
+          echo "ERROR: TWX domain '$twx' was not found in any deployment file."
+          exit 1
+        fi
       done
     fi
   ;;
