@@ -556,13 +556,45 @@ for SERVICE in "${SERVICES[@]}"; do
     fi 
   ;;
   "Enable site")
+    # if [[ "$SERVICE" == "ces" ]]; then
+    #   for idx in "${!EM_WEB_DOMAIN[@]}"; do
+    #     em="${EM_WEB_DOMAIN[$idx]}"
+    #     nc="${NC_WEB_DOMAIN[$idx]}"
+    #     echo "EM=$em | NC=$nc"
+
+    #     found=false
+    #     for file in "${ces_file_name[@]}"; do
+    #       echo "Searching $file"
+
+    #       #check whether the site exists
+    #       if EM_VAL="$em" NC_VAL="$nc" yq e '
+    #       .siteinfo[]
+    #       | select(
+    #           (.web_emdomain[] == strenv(EM_VAL))
+    #           and
+    #           (.web_ncdomain[] == strenv(NC_VAL))
+    #       )
+    #       ' "$file" | grep -q .; then
+    #         echo "Found in $file"
+    #         enable_ces_siteinfo "$file" "$em" "$nc"
+    #         break
+    #       fi
+    #     done  
+    #   done
+    # fi
+    
     if [[ "$SERVICE" == "ces" ]]; then
       for idx in "${!EM_WEB_DOMAIN[@]}"; do
         em="${EM_WEB_DOMAIN[$idx]}"
         nc="${NC_WEB_DOMAIN[$idx]}"
         echo "EM=$em | NC=$nc"
+
+        found=false
+
         for file in "${ces_file_name[@]}"; do
           echo "Searching $file"
+
+          # Check whether the site exists
           if EM_VAL="$em" NC_VAL="$nc" yq e '
           .siteinfo[]
           | select(
@@ -571,11 +603,39 @@ for SERVICE in "${SERVICES[@]}"; do
               (.web_ncdomain[] == strenv(NC_VAL))
           )
           ' "$file" | grep -q .; then
-            echo "Found in $file"
-            enable_ces_siteinfo "$file" "$em" "$nc"
+
+            found=true
+
+            # Check whether it is actually disabled
+            if EM_VAL="$em" NC_VAL="$nc" yq e '
+            .siteinfo[]
+            | select(
+                (.web_emdomain[] == strenv(EM_VAL))
+                and
+                (.web_ncdomain[] == strenv(NC_VAL))
+                and
+                (.disable == true)
+            )
+            ' "$file" | grep -q .; then
+
+                echo "Found disabled site in $file"
+                enable_ces_siteinfo "$file" "$em" "$nc"
+
+            else
+                echo "ERROR: Site $nc is already enabled."
+                exit 1
+            fi
+
             break
           fi
-        done  
+        done
+
+        if [[ "$found" == "false" ]]; then
+          echo "ERROR: Site not found."
+          echo "EM Domain : $em"
+          echo "NC Domain : $nc"
+          exit 1
+        fi
       done
     fi
 
